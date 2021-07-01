@@ -5,3 +5,6 @@
 
 ## 🤔 [Reflow or Repaint(or ReDraw)과정 설명 및 최적화 방법](https://github.com/saseungmin/frontend-tech-interview/blob/main/%EB%B8%8C%EB%9D%BC%EC%9A%B0%EC%A0%80%EC%9D%98%20%EB%8F%99%EC%9E%91%20%EC%9B%90%EB%A6%AC/reflow_repaint.md)
 - [출처](https://webclub.tistory.com/346)
+
+## 🤔 [브라우저는 웹페이지를 어떻게 그리나요? - Critical Rendering Path](https://github.com/saseungmin/frontend-tech-interview/blob/main/%EB%B8%8C%EB%9D%BC%EC%9A%B0%EC%A0%80%EC%9D%98%20%EB%8F%99%EC%9E%91%20%EC%9B%90%EB%A6%AC/critical_rendering_path.md)
+- [출처](https://m.post.naver.com/viewer/postView.nhn?volumeNo=8431285&memberNo=34176766)
