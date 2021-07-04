@@ -1,5 +1,5 @@
 # 😊 frontend-tech-interview
-- FrontEnd Tech Interview / 프론트엔드 기술 면접 정리
+- FrontEnd Tech Interview / 프론트엔드 기술 아티클 정리
 
 ### 👉 [브라우저의 동작 원리](https://github.com/saseungmin/frontend-tech-interview/tree/main/%EB%B8%8C%EB%9D%BC%EC%9A%B0%EC%A0%80%EC%9D%98%20%EB%8F%99%EC%9E%91%20%EC%9B%90%EB%A6%AC)
 
