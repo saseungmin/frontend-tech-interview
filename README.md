@@ -12,3 +12,7 @@
 ### 👉 [CORS(Cross Origin Resource Sharing)](https://github.com/saseungmin/frontend-tech-interview/tree/main/cors)
 
 #### 💻 [CORS는 왜 이렇게 우리를 힘들게 하는걸까?](https://github.com/saseungmin/frontend-tech-interview/blob/main/cors/cors%EB%8A%94_%EC%99%9C_%EC%9D%B4%EB%A0%87%EA%B2%8C_%EC%9A%B0%EB%A6%AC%EB%A5%BC_%ED%9E%98%EB%93%A4%EA%B2%8C_%ED%95%98%EB%8A%94%EA%B1%B8%EA%B9%8C.md)
+
+### 👉 [React](https://github.com/saseungmin/frontend-tech-interview/tree/main/react)
+
+#### 💻 [React Architecture 및 패턴과 관련된 아티클](https://github.com/saseungmin/frontend-tech-interview/tree/main/react/React%20Clean%20Architecture)
