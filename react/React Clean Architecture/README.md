@@ -1,8 +1,4 @@
 ## 👉 React Architecture 및 패턴과 관련된 아티클
-- [React로 사고하기 - 공식 문서](https://ko.reactjs.org/docs/thinking-in-react.html)
-- [Making good component design decisions in React](https://marvelapp.com/blog/making-good-component-design-decisions-in-react/)
-- [React Clean Architecture](https://dev.to/kpiteng/react-clean-architecture-114f?utm_source=dormosheio&utm_campaign=dormosheio&fbclid=IwAR3E77zXUJT0TuDbOiNb6KvcYStKA3dWsNm--5S0_fN5TydqbCGOt48tVLk)
-- [React Folder Structure in 5 Steps](https://smoh.tistory.com/385)
 
 ### 🎈 [리액트 설계 가이드](https://www.stevy.dev/react-design-guide)
 #### 리액트 설계를 하는 원칙
@@ -70,3 +66,9 @@
 
 하지만 만약 병을 빨간 색으로 반쯤 채우고 다른 색으로 나머지를 채운다고 한다면 문제가 있을 것이다. 그 색이 잘 섞이지 않는다면? 또는 원래의 색을 제거하고 다른색으로 대체해야한다면? 이것은 비즈니스 로직을 구현할 때도 발생할 수 있는 문제로 코드 리팩터링과 컴포넌트 재사용을 어렵게 만든다.   
 
+### 📌 참고 링크
+
+- [React로 사고하기 - 공식 문서](https://ko.reactjs.org/docs/thinking-in-react.html)
+- [Making good component design decisions in React](https://marvelapp.com/blog/making-good-component-design-decisions-in-react/)
+- [React Clean Architecture](https://dev.to/kpiteng/react-clean-architecture-114f?utm_source=dormosheio&utm_campaign=dormosheio&fbclid=IwAR3E77zXUJT0TuDbOiNb6KvcYStKA3dWsNm--5S0_fN5TydqbCGOt48tVLk)
+- [React Folder Structure in 5 Steps](https://smoh.tistory.com/385)
