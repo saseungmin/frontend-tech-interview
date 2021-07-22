@@ -83,3 +83,7 @@ console.log(x); // global
 `__proto__`은 생략이 가능하기 때문에 인스턴스는 constructor의 prototype을 자신의 메서드인것처럼 호출할 수 있습니다.
 `__proto__` 방향으로 계속 나아가다보면 최종적으로 Object.prototype에 도달하게되는데, 이러한 `__proto__`안에 다시 `__proto__`를 찾아가는 방식을 프로토타입 체인닝이라고 합니다. 이러한 구조적인 원리 때문에 저희는 각자의 프로토타입 메서드를 자신의 메서드인냥 호출이 가능합니다. 이때의 접근 방식은 자신으로부터 가장 가까운 대상에서부터 먼 대상으로 나아가며, 원하는 값을 찾으면 중단하게 됩니다.
 Object.prototype에는 모든 데이터 타입이 사용할 수 있는 hasOwnProperty 범용적인 메서드들이 존재하며, 객체만을 위한 메서드는 Object 생성자 안에 스택틱하게 담겨있습니다.
+
+### 👉 자바스크립트의 비동기 작업 처리방식
+자바스크립트는 내부적으로 stack, webapis, task queue, event loop가 존재합니다. stack은 스코프 단위로 수행되며, webapis는 비동기적 처리할 작업을 스택으로 넘겨받은 후 해당 코드를 실행합니다. task queue는 webapis에서 비동기적 처리가 끝난 작업이 task queue에 쌓이게 됩니다. event loop는 stack에 남은 할일이 존재하지 않으면 대기중인 task queue를 stack으로 올리는 역할을 합니다.   
+그래서 비동기적인 작업은 stack에서 코드가 실행되고 비동기적으로 처리할 코드들이 존재한다면, webapis로 옮겨서 여기서 처리를 합니다. 그리고 처리가 끝나면 task queue로 이동하여 대기하게 되고, event loop는 stack에 비워져있는 것을 확인 한 뒤 비워져있으면 task queue에 있는 작업을 stack으로 올린뒤 해당 코드를 실행합니다. 그리고 이 과정을 반복합니다.   
