@@ -165,3 +165,282 @@ vavr.io (functional library for Java)
 - 그냥 조용히 묵묵히 저지른다. 또는, 적용하고 나서 통보
   - 지르고 나서, 왜 안되는 지를 물어보자.
   - 당당하지 못 할 이유가 없다.
+
+## 🎈 함수형 도메인 주도 설계 구현
+- 예제: 결제 시스템
+두 가지 할인 유형
+비율 퍼센트
+정액 할인
+
+#### Table Driven Design의 문제
+
+높은 복잡도
+인지 부하가 늘어남
+
+```scala
+enum DiscountType:
+  case Percentage
+  case FixedAmount
+
+class Discount(
+  var discountType: DiscountType,
+  var percentage: Option[Int],
+  var fixedAmount: Option[BigDecimal],
+  var fixedAmountCurrency: Option[Currency]
+)
+
+C(Discount) = C(discountType) * C(percentage) *
+              C(fixedAmount) * C(fixedAmountCurrency)
+
+            = C(DiscountType) C(Option[Int]) *
+              C(Option[BigDecimal]) * C(Option[Currency])
+
+            = 2 * 2 * 2 * 2
+            = 16
+// Discount가 가질 수 있는 경우의 수는 16개
+```
+
+- 잘못된 값에 접근 가능
+- 유지보수할 때 생기는 일
+  - 특정 할인 유형에 새로운 필드
+    - 계산 과정에 반영하는걸 까먹었다
+  - 새로운 할인 유형 추가
+    - else if 문 추가.
+
+#### 대수적 자료형 (ADT)
+- ADT를 이용한 도메인 모델링
+
+```scala
+enum Discount:
+  case Percentage(percent: Int)
+  case Fixed(amount: BigDecimal, currency: Currency)
+```
+
+```
+할인
+  - 비율: 퍼센트(정수)
+  - 정액: 액수(실수), 통화(통화코드)
+```
+
+```scala
+def discount(subtotal: Money, d: Discount): Money =
+  d match {
+    case Percentage(percent) => // amount 접근 불가
+    case Fixed(amount, currency) => // percent 접근 불가
+  }
+```
+
+ADT로 모델링 시 장점
+- 유효한 상태만 포현 가능
+- 복잡도 감소
+
+ADT 케이스의 복잡도
+- 두 가지 경우에만 신경을 쓸 수 있다.
+
+```scala
+enum Discount:
+  case Percentage(percent: Int)
+  case Fixed(amount: BigDecimal, currency: Currency)
+```
+
+```scala
+C(Discount) = C(Percentage) + C(Fixed)
+            = C(percent) + (C(amount) * C(currency))
+            = C(Int) + (C(BigDecimal) * C(Currency))
+            = 1 + (1 * 1)
+            = 2
+```
+
+
+테이블 주도 VS. 함수형
+
+- 테이블 주도
+
+```scala
+enum DiscountType:
+  case Percentage
+  case FixedAmount
+
+class Discount(
+  var discountType: DiscountType,
+  var percentage: Option[Int],
+  var fixedAmount: Option[BigDecimal],
+  var fixedAmountCurrency: Option[Currency]
+)
+```
+
+- 함수형
+
+```scala
+enum Discount:
+  case Percentage(percent: Int)
+  case Fixed(amount: BigDecimal, currency: Currency)
+```
+
+
+EITHER 타입을 이용한 도메인 예외 처리
+
+Either ADT
+
+```scala
+enum Either[+A, +B]:
+  case Left(value: A)
+  case Right(value: B)
+```
+
+러스트의 Result도 같은 구조
+
+```rust
+pub enum Result<T, E> {
+  Ok(T),
+  Err(E),
+}
+```
+
+EITHER 타입은 우편향
+
+```scala
+case class LengthError()
+
+def oddLength(str: String): Either[LengthError, Int] =
+  str.length match
+    case n if n % 2 == 0 => Right(n)
+    case n => Left(LengthError())
+
+var result =
+  for
+    s <- oddLength("scala") // Right(5)
+    h <- oddLength("haskell") // Right(7)
+  yield s + h
+
+assert(result == Right(12))
+```
+
+```scala
+var result =
+  for
+    s <- oddLength("scala") // Right(5)
+    j <- oddLength("java") // Left(LengthError())
+    h <- oddLength("haskell") // 평가하지 않음
+  yield s + h
+
+assert(result == Left(LengthError()))
+```
+
+다 좋은데 실무에서 쓸 수 있나?
+- 오류 DB 설정 관리 의존성 관리
+- 이것들이 가능한가?
+
+#### 순수 함수형 프로그램의 특징
+- https://zio.dev/overview/overview_background/
+
+절차적
+- 부분적: 모든 입력을 처지하지 않음(예외)
+- 비결정적: 같은 입력, 다른 출력
+- 비순수: 부수효과, 실행 중 값이 변함
+
+함수형
+- 전체적: 모든 입력에 대한 출력이 존재함
+- 결정적: 입력값이 같으면 출력값도 같음
+- 순수함: 부수효과가 없음
+
+순수 함수형 이펙트가 가능한가요?
+가능: 함수형 이펙트 동작원리
+
+프로그램의 명세와 실행을 분리한다.
+함수를 이용해 작은 프로그램을 큰 프로그램으로 조립한다.
+
+비슷한 사례
+- 파이썬 스크립트와 인터프리터
+- Abstract Syntax Tree(AST)
+- Continuation-Passing Style (CPS)
+
+예: console
+ADT
+
+```scala
+enum Console[+A]:
+  case Return(value: () => A)
+  case PrintLine(line: String, rest: Console[A])
+  case ReadLine(rest: String => Console[A])
+```
+
+console (CONT.1)
+프로그램
+
+```scala
+val example1 = Console[Unit] =
+  PrintLine("안녕하세요, 이름이 무엇인가요?",
+    ReadLine(name =>
+      PrintLine(s"${name}님, 반가워요.",
+        Return(() => ()))))
+```
+
+console (count.2)
+인터프리터   
+패턴 매칭을 통해 실행   
+
+```scala
+def interpret[A](program: Console[A]): A = program match {
+  case Return(value) =>
+    value()
+  case PrintLine(line, next) =>
+    println(line)
+    interpret(next)
+  case ReadLine(next) =>
+    interpret(next(scala.io.StdIn.readLine()))
+}
+```
+#### [ZIO](https://zio.dev/)
+- 순수 함수형 이펙트
+- 강력한 타입 안정성
+- 동시성, 스트리밍
+- 활발한 라이브러리 생태계와 커뮤니티
+  - 스칼라의 Spring
+- 스칼라의 객체지향적인 면 활용
+- Cats등 다른 함수형 라이브러리 호환
+
+##### 오류 처리
+
+```scala
+def findUserByName(name: String): IO[DBError, Option[user]]
+def pureValidation(user: User): Either[DomainError, Unit]
+def flakyApiCall(x: Int): IO[NetworkError, Remote]
+
+def prog: ZIO[Has[Clock], AppError, Remote] =
+  for
+    user <- findUserByName("guersam")
+      .catchAll(e => IO.fail(AppError.Unexpected(e)))
+      .someOrFail(AppError.NotFound("User not found"))
+
+    _ <- IO.from(pureValidation(user))
+      .mapError(e => AppError.FromDomainError(e.msg))
+```
+
+#### 객체지향 설계 기법 재사용
+- FP in small, OOP in large
+- 인터페이스와 구현 분리
+
+```scala
+trait UserRepo:
+  def getById(id: UserId): IO[DBError, User]
+
+case class UserRepoLive(log: Logging, db: Database)
+  extends UserRepo:
+    // ...
+
+case class TestUserLive(ref: Ref[Map[UserId, User]])
+  extends UserRepo:
+    // ...
+```
+
+#### 정리
+- 대수적 자료형을 이용한 도메인 모델링
+  - 테이블 주도 설계와 함수형 설계
+  - 통제 가능한 모델 복잡도 관리
+- ZIO로 실제로 유용한 프로그램 만들기
+  - 함수형 이펙트 시스템
+    - 명세와 실행을 분리
+  - ZIO
+    - 오류 처리
+    - 의존성 관리
