@@ -7,3 +7,5 @@
 ### [클린 코드](https://github.com/saseungmin/frontend-tech-interview/blob/main/TestAndTDD/clean-code.md)
 
 ### [실용주의 프로그래머](https://github.com/saseungmin/frontend-tech-interview/blob/main/TestAndTDD/pragmatic-programmer.md)
+
+### [테스트 주도 개발로 배우는 객체 지향 설계와 실천](https://github.com/saseungmin/frontend-tech-interview/blob/main/TestAndTDD/growing-object-oriented-software-guided-by-tests.md)
