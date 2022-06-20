@@ -41,3 +41,11 @@
 ## 🍭 [Test와 TDD에 대한 정리](https://github.com/saseungmin/frontend-tech-interview/tree/main/TestAndTDD)
 
 ## 🍭 [LiftIO 2021](https://github.com/saseungmin/frontend-tech-interview/tree/main/liftIO-2021)
+
+
+### Reference
+- [front-end interview handbook](https://github.com/yangshun/front-end-interview-handbook)
+- https://github.com/baeharam/Must-Know-About-Frontend
+- https://github.com/javascript-tutorial/ko.javascript.info
+- https://github.com/gyoogle/tech-interview-for-developer
+- https://github.com/JaeYeopHan/Interview_Question_for_Beginner
