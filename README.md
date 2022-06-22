@@ -19,9 +19,15 @@
 - 콜 스택과 힙
 - 프로토타입
 - 자바스크립트의 비동기 작업 처리방식
+- JavaScript와 관련하여 same-origin 정책을 설명하세요.
+- `"use strict";` 이 무엇인가요? 사용시 장단점이 무엇인가요?
+- 동기, 비동기 함수의 차이점을 설명하세요.
+- 고차 함수(higher-order function)의 정의는 무엇인가요?
+
 
 ## 🍭 [CSS](https://github.com/saseungmin/frontend-tech-interview/tree/main/css)
 - Resetting과 Normalizing CSS의 차이점은 무엇인가요?
+- `* { box-sizing: border-box; }`는 무엇을 하나요? 장점은 무엇인가요?
 
 ## 🍭 [Network](https://github.com/saseungmin/frontend-tech-interview/tree/main/network)
 - HTTP와 HTTPS의 차이점
