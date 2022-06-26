@@ -1,13 +1,13 @@
-### 🎈 React 18 변경점
+## 👉 React 18 변경점
 
-#### `useId`
+### 🎈 `useId`
 `useId`는 클라이언트와 서버간의 hydration의 mismatch를 피하면서 유니크한 아이디를 생성할 수 있는 새로운 hook입니다. 이는 주로 고유한 `id`가 필요한 접근성 API와 사용되는 컴포넌트에 유용할 것으로 기대됩니다.   
 
 아이디는 기본적으로 트리 내부의 노드의 위치를 나타내는 base 32 문자열입니다. 트리가 여러 children으로 분기될 때마다, 현재 레벨에서 자식 수준을 나타내는 비트를 시퀸스 왼쪽에 추가하게 됩니다,.   
 
 `useId`는 목록에서 키를 생성하기 위한 것이 아닙니다. 키는 데이터에서 생성되어야 합니다.   
 
-#### `useTransition`
+### `useTransition`
 
 이 두 메소드를 사용하면 일부 상태 업데이트를 긴급하지 않은 것(not urgent)로 표시할 수 있습니다. 이것으로 표시되지 않은 상태 업데이트는 긴급한 것으로 간주됩니다. 긴급한 상태 업데이트가 긴급하지 않은 상태 업데이트을 중단할 수 있습니다.   
 
@@ -169,6 +169,48 @@ function ProfilePage() {
 버튼을 클릭하면 트랜지션이 시작되고 그 안에 `props.onClick()` 이 호출되서 `<ProfilePage>` 컴포넌트에서 `handleRefreshClick` 함수가 실행됩니다. 새로운 데이터를 가져오기 시작하지만 트랜지션 내부라서 폴백이 보여지지 않으며 `useTransition` 호출에 지정된 10초가 지나지 않았습니다. 트랜지션이 보류중인 동안 버튼에 인라인으로 로딩 인디케이터를 봅니다.   
 
 이제 컨커런트 모드가 컴포넌트의 격리 수준 및 모듈성을 희생하지 않고도 우수한 사용자 경험을 만드는지 배웠습니다. React는 트랜지션을 조정합니다.
+
+### 🎈 [`useDeferredValue`](https://reactjs.org/docs/hooks-reference.html#usedeferredvalue)
+`useDeferredValue`를 사용하면, 트리에서 급하지 않은 부분의 재랜더링을 지연할 수 있습니다. 이는 `debounce`와 비슷하지만, 몇가지 더 장점이 있습니다. 고정된 지연시간이 없으므로, 리액트는 첫번째 렌더링이 반영되는 즉시 지연 렌더링을 시도합니다. 이 지연된 렌더링은 인터럽트가 가능하며, 사용자 입력을 차단하지 않습니다.
+
+```js
+const deferredValue = useDeferredValue(value);
+```
+
+`useDeferredValue`값을 수락하고 더 긴급한 업데이트를 연기할 값의 새 복사본을 반환합니다. 현재 렌더링이 사용자 입력과 같은 긴급 업데이트의 결과인 경우 React는 이전 값을 반환한 다음 긴급 렌더링이 완료된 후 새 값을 렌더링합니다.   
+
+이 hook은 디바운싱 또는 throttling을 사용하여 업데이트를 연기하는 user-space hooks와 유사합니다.   
+
+`useDeferredValue` 사용의 이점은 React가 다른 작업이 완료되는 즉시 업데이트 작업을 수행하고(임의의 시간을 기다리는 대신) `startTransition`과 같이 지연된 값이 기존 콘텐츠에 대한 예기치 않은 대체를 트리거하지 않고 일시 중단될 수 있다는 것입니다.
+
+#### Memoizing deferred children
+`useDeferredValue`는 전달한 값만 연기합니다. 긴급(urgent) 업데이트 중에 자식 컴포넌트가 다시 렌더링되는 것을 방지하려면 해당 컴포넌트도 `React.memo` 또는 `React.useMemo`로 memoize해야 합니다.
+
+```jsx
+function Typeahead() {
+  const query = useSearchQuery('');
+  const deferredQuery = useDeferredValue(query);
+
+  // Memoizing tells React to only re-render when deferredQuery changes,
+  // not when query changes.
+  const suggestions = useMemo(() =>
+    <SearchSuggestions query={deferredQuery} />,
+    [deferredQuery]
+  );
+
+  return (
+    <>
+      <SearchInput query={query} />
+      <Suspense fallback="Loading results...">
+        {suggestions}
+      </Suspense>
+    </>
+  );
+}
+```
+
+자식을 memoize하면 React는 `query`가 변경될 때가 아니라 `deferredQuery`가 변경될 때만 다시 렌더링하면 됩니다.   
+이 주의 사항은 `useDeferredValue`에만 있는 것이 아니며 디바운싱 또는 throttling을 사용하는 유사한 hook에 사용하는 것과 동일한 패턴입니다.
 
 > https://reactjs.org/blog/2022/03/29/react-v18.html   
 > https://yceffort.kr/2022/04/react-18-changelog   

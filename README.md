@@ -66,7 +66,7 @@
 ## 🍭 [LiftIO 2021](https://github.com/saseungmin/frontend-tech-interview/tree/main/liftIO-2021)
 
 
-### Reference
+## 👉 Reference
 - [front-end interview handbook](https://github.com/yangshun/front-end-interview-handbook)
 - https://github.com/baeharam/Must-Know-About-Frontend
 - https://github.com/javascript-tutorial/ko.javascript.info
