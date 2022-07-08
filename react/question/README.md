@@ -13,3 +13,13 @@ virtual DOM은 실제 DOM의 변화를 최소화 시켜주는 역할을 합니�
 
 ### 🎈 웹 성능 향상을 위해 최적화를 해 본 경험이 있나요? 혹은 useMemo와 useCallback 메소드를 활용해 최적화하는 원리에 대해서 설명하세요.
 `useMemo`와 `useCallback`은 성능 최적화를 위해서 사용되는 Hook입니다. 이 때, `useMemo`는 특정 결과 값을 재사용하는 반면에 `useCallback`은 특정함수를 새로 만들지 않고 재사용하고 싶을 때 사용합니다. 이 둘은 dependency 리스트를 이용하여 그 중 하나가 변경이 되면 결과에 대해 변경됩니다.
+
+### 🎈 React Concurrent Mode
+자바스크립트는 싱글스레드 기반 언어이다보니 동시에 처리가 불가능합니다. 그래서 React는 자바스크립트이고 따라서 동일한 제한 사항에 묶여있습니다. 현재로서는, React가 [재조정(Reconciliation)](https://ko.reactjs.org/docs/reconciliation.html) 과정을 한번 시작하면, 이 과정이 완전히 끝나기 전까지는 이를 멈출 수 없습니다. 그러면 브라우저의 메인 UI 스레드는 사용자 입력을 받는 등의 다른 작업을 실행할 수 없게 됩니다.   
+
+그래서 concurrent mode가 탄생하게 되었는데 여러 작업을 동시에 처리하도록 하는 방식인데, 실제로는 동시로 작업이 수행되지는 않습니다. 전환이 빠르기 떄문에 그렇게 보이는 것입니다. 그래서 여러 작업을 작은 단위로 나눈뒤 그 작업들 간의 우선순위를 정해서 그 작업을 수행하는 방식입니다.   
+
+Concurrent mode를 사용하면 사용자 경험에서 아주 중요한 역할을 합니다. 사용자가 필요로하는 중요한 부분을 우선순위를 높게하고 불필요한 부분에는 delay를 걸어주어 사용자경험을 향상시킬 수 있습니다.
+
+- https://reactjs.org/blog/2022/03/29/react-v18.html#what-is-concurrent-react
+- https://velog.io/@cadenzah/react-concurrent-mode
