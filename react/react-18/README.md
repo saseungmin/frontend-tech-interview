@@ -212,6 +212,172 @@ function Typeahead() {
 자식을 memoize하면 React는 `query`가 변경될 때가 아니라 `deferredQuery`가 변경될 때만 다시 렌더링하면 됩니다.   
 이 주의 사항은 `useDeferredValue`에만 있는 것이 아니며 디바운싱 또는 throttling을 사용하는 유사한 hook에 사용하는 것과 동일한 패턴입니다.
 
+### 🎈 [`useSyncExternalStore`](https://reactjs.org/docs/hooks-reference.html#usesyncexternalstore)(Library Hooks)
+
+> Library Hooks는 라이브러리 작성자가 라이브러리를 React 모델에 깊이 통합할 수 있도록 제공되며 일반적으로 애플리케이션 코드에서는 사용되지 않습니다.
+
+```js
+const state = useSyncExternalStore(subscribe, getSnapshot[, getServerSnapshot]);
+```
+
+`useSyncExternalStore`은 선택적 hydration 및 시간 분할과 같은 concurrent rendering 기능과 호환되는 방식으로 외부 데이터 소스에서 읽고 subscribing하는 데 권장되는 hook입니다.    
+
+외부 데이터에 대한 원본에 대한 subscription을 필요로 할 때 더 이상 `useEffect`가 필요하지 않고, 이는 리액트 외부 상태와 통합되는 모든 라이브러리에 권장된다.   
+
+이 메서드는 store 값을 반환하고 세 가지 인수를 허용합니다.
+- `subscribe`: 스토어가 변경될 때마다 호출되는 콜백을 등록하는 함수입니다.
+- `getSnapshot`: store의 현재 값을 반환하는 함수입니다.
+- `getServerSnapshot`: 서버 렌더링 중에 사용된 스냅샷을 반환하는 함수입니다.
+
+가장 기본적인 예는 단순히 전체 store를 subscription하는 것입니다.
+
+```js
+const state = useSyncExternalStore(store.subscribe, store.getSnapshot);
+```
+
+다음과 같이 특정 필드를 구독할 수도 있습니다.
+
+```js
+const selectedField = useSyncExternalStore(
+  store.subscribe,
+  () => store.getSnapshot().selectedField,
+);
+```
+
+서버 렌더링 시 서버에서 사용하는 스토어 값을 직렬화하여 `useSyncExternalStore`에 제공해야 합니다. React는 서버 불일치를 방지하기 위해 hydration 중에 이 스냅샷을 사용합니다.
+
+```js
+const selectedField = useSyncExternalStore(
+  store.subscribe,
+  () => store.getSnapshot().selectedField,
+  () => INITIAL_SERVER_SNAPSHOT.selectedField,
+);
+```
+
+- External Store: 외부 스토어라는 것은 우리가 subscribe하는 무언가를 의미합니다. 예를 들어 리덕스 스토어, 글로벌 변수, dom 상태 등이 될 수 있습니다.
+- Internal Store: `props`, `context`, `useState`, `useReducer` 등 리액트가 관리하는 상태를 의미합니다.
+- [Tearing](https://github.com/reactwg/react-18/discussions/69): 시각적인 비일치를 의미한다. 예를 들어, 하나의 상태에 대해 UI가 여러 상태로 보여지고 있는, (= 각 컴포넌트 별로 업데이트 속도가 달라서 발생하는) UI가 찢어진 상태를 의미합니다.
+
+> 리액트 18 이전에는 이러한 문제가 없었다. 그러나 리액트 18부터 도입된 concurrent 렌더링이 등장하며서 렌더링이 렌더링을 잠시 일시중지할 수 있게 되면서 이 문제가 대두되기 시작했다. 일시중지가 발생하는 사이에 업데이트는 렌더링에 사용되는 데이터와 이와 관련된 변경사항을 가져올 수 있게 되었다. 이로 인해 UI는 동일한 데이터에 다른 값을 표시할 수 있게 되버렸다.
+
+아래와 같이 기존의 동기 렌더링 시에는 UI는 항상 일관성을 유지할 수 있었습니다.
+
+![synchronous-rendering](../images/synchronous-rendering.png)
+
+그러나 concurrent 렌더링에서는 초기에는 아래 그림처럼 파란색입니다. 리액트는 외부 스토어가 바뀌면서 빨간색으로 업데이트 합니다. 리액트는 계속해서 컴포넌트를 빨간색으로 바꾸려고 시도할 것입니다. 이 과정에서 발생하는 UI의 불일치를 `tearing`이라고 합니다.
+
+![concurrent-rendering](../images/concurrent-rendering.png)
+
+```js
+import React, { useState, useEffect, useCallback } from 'react'
+
+// library code
+
+const createStore = (initialState) => {
+  let state = initialState
+  const getState = () => state
+  const listeners = new Set()
+  const setState = (fn) => {
+    state = fn(state)
+    listeners.forEach((l) => l())
+  }
+  const subscribe = (listener) => {
+    listeners.add(listener)
+    return () => listeners.delete(listener)
+  }
+  return { getState, setState, subscribe }
+}
+
+const useStore = (store, selector) => {
+  const [state, setState] = useState(() => selector(store.getState()))
+  useEffect(() => {
+    const callback = () => setState(selector(store.getState()))
+    const unsubscribe = store.subscribe(callback)
+    callback()
+    return unsubscribe
+  }, [store, selector])
+  return state
+}
+
+//Application code
+
+const store = createStore({ count: 0, text: 'hello' })
+
+const Counter = () => {
+  const count = useStore(
+    store,
+    useCallback((state) => state.count, []),
+  )
+  const inc = () => {
+    store.setState((prev) => ({ ...prev, count: prev.count + 1 }))
+  }
+  return (
+    <div>
+      {count} <button onClick={inc}>+1</button>
+    </div>
+  )
+}
+
+const TextBox = () => {
+  const text = useStore(
+    store,
+    useCallback((state) => state.text, []),
+  )
+  const setText = (event) => {
+    store.setState((prev) => ({ ...prev, text: event.target.value }))
+  }
+  return (
+    <div>
+      <input value={text} onChange={setText} className="full-width" />
+    </div>
+  )
+}
+
+const App = () => {
+  return (
+    <div className="container">
+      <Counter />
+      <Counter />
+      <TextBox />
+      <TextBox />
+    </div>
+  )
+}
+```
+
+`useState`, `useEffect`를 사용하고 있는 `useStore` hook을 `useSyncExternalStore`로 변경해볼 수 있습니다.
+
+```js
+import { useSyncExternalStore } from 'react'
+
+const useStore = (store, selector) => {
+  return useSyncExternalStore(
+    store.subscribe,
+    useCallback(() => selector(store.getState(), [store, selector])),
+  )
+}
+```
+
+코드가 훨씬 간결해졌습니다. 그러면 어떤 라이브러리들이 이러한 concurrent rendering에 영향을 받을까?
+
+렌더링 중에 외부 가변 데이터에 접근하지 않고, react props, state, context 만을 사용하여 정보를 전달하는 컴포넌트와 훅만 가지고 있는 라이브러리라면 영향을 받지 않을 것입니다.   
+데이터 fetch, 상태관리, redux, mobx, relay 등은 영향을 받을 것입니다. 이는 리액트 외부에 상태를 저장하기 때문입니다. concurrent 렌더링 시에는 react가 모르게 렌더링 중에 이러한 값이 업데이트 될 수 있기 때문입니다.
+
+> 참고: https://github.com/reactwg/react-18/discussions/86   
+> 참고: https://www.youtube.com/watch?v=oPfSC5bQPR8&t=694s&ab_channel=ReactConf2021
+> `getSnapShot`은 캐시된 값을 반환해야 합니다. `getSnapshot`이 연속으로 여러 번 호출되면 그 사이에 스토어 업데이트가 없는 한 정확히 동일한 값을 반환해야 합니다.
+
+### 🎈 `useInsertionEffect`
+
+```js
+useInsertionEffect(didUpdate);
+```
+
+signature는 `useEffect`와 동일하지만, 모든 DOM 변형 전에 동기적으로 실행됩니다. `useLayoutEffect`에서 레이아웃을 읽기 전에 DOM에 스타일을 삽입하려면 이것을 사용하십시오. 이 hook는 범위가 제한되어 있으므로 이 hook는 refs에 접근할 수 없으며 업데이트를 예약할 수 없습니다.
+
+> `useInsertionEffect`는 css-in-js 라이브러리 작성자로 제한되어야 합니다. 대신 `useEffect` 또는 `useLayoutEffect`를 사용하세요.
+
+
 > https://reactjs.org/blog/2022/03/29/react-v18.html   
 > https://yceffort.kr/2022/04/react-18-changelog   
 > https://ko.reactjs.org/docs/concurrent-mode-patterns.html
