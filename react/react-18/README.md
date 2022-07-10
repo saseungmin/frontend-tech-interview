@@ -367,7 +367,7 @@ const useStore = (store, selector) => {
 > 참고: https://www.youtube.com/watch?v=oPfSC5bQPR8&t=694s&ab_channel=ReactConf2021
 > `getSnapShot`은 캐시된 값을 반환해야 합니다. `getSnapshot`이 연속으로 여러 번 호출되면 그 사이에 스토어 업데이트가 없는 한 정확히 동일한 값을 반환해야 합니다.
 
-### 🎈 `useInsertionEffect`
+### 🎈 `useInsertionEffect`(Library Hooks)
 
 ```js
 useInsertionEffect(didUpdate);
