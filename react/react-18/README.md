@@ -379,7 +379,7 @@ signature는 `useEffect`와 동일하지만, 모든 DOM 변형 전에 동기적�
 
 ## Breaking Change
 
-### [Automatic batching](https://reactjs.org/blog/2022/03/29/react-v18.html#new-feature-automatic-batching)
+### 🎈 [Automatic batching](https://reactjs.org/blog/2022/03/29/react-v18.html#new-feature-automatic-batching)
 
 > https://github.com/reactwg/react-18/discussions/21
 
@@ -432,6 +432,24 @@ function handleClick() {
   // React has updated the DOM by now
 }
 ```
+
+### 🎈 [New Suspense Features](https://reactjs.org/blog/2022/03/29/react-v18.html#new-suspense-features)
+
+Suspense를 사용하면 아직 표시할 준비가 되지 않은 경우 컴포넌트 트리의 일부에 대한 로드 상태를 선언적으로 지정할 수 있습니다.   
+
+```jsx
+<Suspense fallback={<Spinner />}>
+  <Comments />
+</Suspense>
+```
+
+Suspense는 React 프로그래밍 모델에서 "UI 로딩 상태"를 일급 선언적 개념(first-class declarative concept)으로 만듭니다.   
+
+우리는 몇 년 전에 제한된 버전의 `Suspense`를 도입했습니다. 그러나 지원되는 유일한 사용 사례는 `React.lazy`로 코드 분할(splitting)이었고 서버에서 렌더링할 때 전혀 지원되지 않았습니다.   
+
+React 18에서는 서버에서 `Suspense`에 대한 지원을 추가하고 concurrent rendering 기능을 사용하여 기능을 확장했습니다. React 18의 `Suspense`는 전환(transition) API와 결합될 때 가장 잘 작동합니다. 만약 전환(transition) 중에 일시 중단하면 React는 이미 보이는 콘텐츠가 fallback으로 대체되는 것을 방지합니다. 대신 React는 잘못된 로드 상태를 방지하기 위해 충분한 데이터가 로드될 때까지 렌더링을 지연합니다.   
+
+자세한 내용은 [React 18의 Suspense에 대한 RFC](https://github.com/reactjs/rfcs/blob/main/text/0213-suspense-in-react-18.md)를 참조하세요.
 
 > https://reactjs.org/blog/2022/03/29/react-v18.html   
 > https://yceffort.kr/2022/04/react-18-changelog   
