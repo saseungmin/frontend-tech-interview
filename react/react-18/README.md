@@ -454,3 +454,51 @@ React 18에서는 서버에서 `Suspense`에 대한 지원을 추가하고 concu
 > https://reactjs.org/blog/2022/03/29/react-v18.html   
 > https://yceffort.kr/2022/04/react-18-changelog   
 > https://ko.reactjs.org/docs/concurrent-mode-patterns.html
+
+### 🎈 [New Strict Mode Behaviors](https://reactjs.org/blog/2022/03/29/react-v18.html#new-strict-mode-behaviors)
+앞으로 React가 상태를 유지하면서 UI의 섹션을 추가 및 제거할 수 있는 기능을 추가하고 싶습니다. 예를 들어, 사용자가 화면에서 멀어졌다가 뒤로 탭하면 React는 즉시 이전 화면을 표시할 수 있어야 합니다. 이를 위해 React는 이전과 동일한 component 상태를 사용하여 트리를 마운트 해제하고 다시 마운트합니다.   
+
+이 기능은 React 앱에 기본적으로 더 나은 성능을 제공하지만 component가 여러 번 마운트되고 파괴되는 효과에 탄력적이어야 합니다. 대부분의 효과는 변경 없이 작동하지만 일부 효과는 한 번만 장착되거나 파괴된다고 가정합니다.   
+
+이러한 문제를 표시하는 데 도움이 되도록 React 18은 Strict Mode에 대한 새로운 개발 전용 검사를 도입했습니다. 이 새로운 검사는 component가 처음으로 마운트될 때마다 모든 component를 자동으로 마운트 해제했다가 다시 마운트하여 두 번째 마운트에서 이전 상태를 복원합니다.
+
+> https://reactjs.org/docs/strict-mode.html#ensuring-reusable-state
+
+### 🎈 일관된 `useEffect` 타이밍
+위에서 언급한 Automatic Batching에서 이어지는 맥락입니다. click, keydown event와 같은 개별 사용자 입력 에벤트 중에 업데이트가 발생한 경우, 항상 동기식으로 effect 함수를 플러쉬합니다. 이전에는 이 기능이 예측가능하거나, 일관적이지 못했습니다.   
+
+### 🎈 엄격해진 hydration 에러
+텍스트 애용 누락, 텍스트 내용 불일치 등은 이제 경고 대신 오류로 처리됩니다. 리액트는 서버 마으컵을 일치시키기 위해 클라이언트 노드에 삽입이나 삭제를 함으로서 개별 노드를 수정해주지 않고, 이제는 트리에서 가장 가까운 `<Suspense>` boundary 까지 클라이언트 렌더링으로 돌아갑니다. 이를 통해 hydration 트리의 일관성을 확보하고, 불일치로 인해 발생할 수 있는 잠재적인 보안 문제를 해결할 수 있스비다.   
+
+### 🎈 Suspense 가 이제 항상 일관되게 적용됨
+트리에 완전히 추가되기 전에, 컴포넌트가 suspend된 경우, 리액트는 불완전한 상태로 컴포넌트를 추가하거나 effect를 발생시키지 않습니다. 대신 리액트는 새 트리를 완전히 버리고 비동기 작업이 완료될 때까지 기다린 다음, 다시 처음부터 렌더링을 시도합니다. 리액트는 브라우저를 차단하지 않고 동시에 렌더링을 재시도합니다.
+
+### 🎈 Suspense와 layout effect
+트리가 suspend되었다가 fallback으로 돌아가면, 리액트 레이아웃 effect를 정리한 다음, 바운더리 내부의 내용이 다시 표시 될 때까지 만듭니다. 이로 인해 컴포넌트 라이브러리가 suspense와 함께 사용될 때 레이아웃을 올바르게 측정할 수 없었던 문제가 해결됩니다.   
+
+### 🎈 새로운 js 환경 (polyfill 필요)
+리액트는 이제 모던 브라우저 기능인 `Promise` `Symbol` `Object.assign`에 의존합니다. 최신 브라우저 기능을 제공하지 않거나, 혹은 호환되지 않는 인터넷 익스플로러 등 오래된 브라우저를 지원해야 하는 경우, 애플리케이션에 글로벌 플로필을 추가하는 것을 고려해봐야 합니다.   
+
+## 눈에 띄는 변화
+
+### 🎈 `undefined`도 렌더링 가능
+이제 컴포넌트가 `undefined`를 리턴해도 에러를 리턴하지 않습니다.   
+
+### 🎈 테스트 시에, `act` 경고가 옵트인 됨
+e2e 테스트 시 `act` 경고는 불필요합니다. [opt-in 개념을 도입](https://github.com/reactwg/react-18/discussions/102)하여 유닛테스트 시에만 이러한 경고문을 받을 수 있도록 구성할 수 있습니다.
+
+### 🎈 No Suppression of `console.log`
+strict 모드에서, 각 컴포넌트를 두번씩 렌더링 하면 예끼치않은 사이드 이펙트를 겪을 수 있다. react 17에서는 이러한 로그를 쉽게 읽게 하기 위해 두 렌더링 중에 하나의 `console.log`를 의도적으로 띄우지 않았습니다. 그러나 이러한 동작이 혼란스럽다는 의견이 있어 더이상 경고문을 제거하지 않습니다. 대신, React DevTools가 설치되어 있다면, 두번째 로그가 회색으로 표시되고, 이를 완전히 없앨 수 있는 옵션이 존재합니다.
+
+### 🎈 메모리 사용량 최적화
+리액트는 마운트 해제시에 더 많은 내부 필드를 정리하여, 애플리케이션에 존재할 수 있는 메모리 누수로 인한 영향을 줄여주었습니다.
+
+### 🎈 React DOM Server
+
+#### `renderToString`
+서버에서 suspending이 일어날 경우 더 이상 에러가 발생하지 않습니다. 대신 가장 가까운 `<Suspense>` 바운더리에 fallback HTML을 내보낸 후, 클라이언트 레벨에서 같은 렌더링을 재시도 합니다. `renderToString`보다는 `renderToPipableStream` `renderToReadableStream`과 같은 스트리밍 api로 전환하는 것을 추천합니다.
+
+#### renderToStaticMarkup
+서버에서 suspending이 일어날 경우 더 이상 에러가 발생하지 않습니다. 대신 가장 가까운 `<Suspense>` 바운더리에 fallback HTML을 내보낸후, 클라이언트 레벨에서 같은 렌더링을 재시도 합니다.
+
+> https://github.com/facebook/react/blob/main/CHANGELOG.md#all-changes
