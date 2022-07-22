@@ -43,6 +43,7 @@
 - [SWR 또는 React Query와 같은 라이브러리가 나타나게 된 배경 및 원인](https://github.com/saseungmin/frontend-tech-interview/tree/main/react/redux%20vs%20react-query)
 - [React 질문](https://github.com/saseungmin/frontend-tech-interview/tree/main/react/question)
 - [React 18 변경점](https://github.com/saseungmin/frontend-tech-interview/tree/main/react/react-18)
+- [재조정(Reconciliation)](https://github.com/saseungmin/frontend-tech-interview/blob/main/react/reconciliation.md)
 
 ## 🍭 [web](https://github.com/saseungmin/frontend-tech-interview/tree/main/web)
 - CSR vs SSR
