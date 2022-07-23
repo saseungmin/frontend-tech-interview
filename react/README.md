@@ -5,3 +5,5 @@
 ## 📚 [SWR 또는 React Query와 같은 라이브러리가 나타나게 된 배경 및 원인](https://github.com/saseungmin/frontend-tech-interview/tree/main/react/redux%20vs%20react-query)
 
 ## 📚 [재조정(Reconciliation)](https://github.com/saseungmin/frontend-tech-interview/blob/main/react/reconciliation.md)
+
+## 📚 [When to `useMemo` and `useCallback`](https://github.com/saseungmin/frontend-tech-interview/blob/main/react/when-to-useMemo-and-useCallback.md)

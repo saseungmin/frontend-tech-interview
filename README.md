@@ -44,6 +44,7 @@
 - [React 질문](https://github.com/saseungmin/frontend-tech-interview/tree/main/react/question)
 - [React 18 변경점](https://github.com/saseungmin/frontend-tech-interview/tree/main/react/react-18)
 - [재조정(Reconciliation)](https://github.com/saseungmin/frontend-tech-interview/blob/main/react/reconciliation.md)
+- [When to `useMemo` and `useCallback`](https://github.com/saseungmin/frontend-tech-interview/blob/main/react/when-to-useMemo-and-useCallback.md)
 
 ## 🍭 [web](https://github.com/saseungmin/frontend-tech-interview/tree/main/web)
 - CSR vs SSR
