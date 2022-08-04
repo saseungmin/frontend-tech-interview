@@ -64,6 +64,7 @@
 - [실용주의 프로그래머](https://github.com/saseungmin/frontend-tech-interview/blob/main/TestAndTDD/pragmatic-programmer.md)
 - [테스트 주도 개발로 배우는 객체 지향 설계와 실천](https://github.com/saseungmin/frontend-tech-interview/blob/main/TestAndTDD/growing-object-oriented-software-guided-by-tests.md)
 - [루비로 배우는 객체지향 디자인](https://github.com/saseungmin/frontend-tech-interview/blob/main/TestAndTDD/design-in-ruby.md)
+- [Front-end에서 추가적인 라이브러리를 사용하여 가독성있는 테스트를 작성해가는 과정을 정리](https://github.com/saseungmin/frontend-tech-interview/tree/main/TestAndTDD/front-end-test)
 
 ## 🍭 [LiftIO 2021](https://github.com/saseungmin/frontend-tech-interview/tree/main/liftIO-2021)
 
