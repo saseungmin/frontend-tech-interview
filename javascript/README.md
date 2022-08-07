@@ -115,6 +115,8 @@ Object.prototype에는 모든 데이터 타입이 사용할 수 있는 hasOwnPro
 자바스크립트는 내부적으로 stack, webapis, task queue, event loop가 존재합니다. stack은 스코프 단위로 수행되며, webapis는 비동기적 처리할 작업을 스택으로 넘겨받은 후 해당 코드를 실행합니다. task queue는 webapis에서 비동기적 처리가 끝난 작업이 task queue에 쌓이게 됩니다. event loop는 stack에 남은 할일이 존재하지 않으면 대기중인 task queue를 stack으로 올리는 역할을 합니다.   
 그래서 비동기적인 작업은 stack에서 코드가 실행되고 비동기적으로 처리할 코드들이 존재한다면, webapis로 옮겨서 여기서 처리를 합니다. 그리고 처리가 끝나면 task queue로 이동하여 대기하게 되고, event loop는 stack에 비워져있는 것을 확인 한 뒤 비워져있으면 task queue에 있는 작업을 stack으로 올린뒤 해당 코드를 실행합니다. 그리고 이 과정을 반복합니다.   
 
+> https://codermun-log.tistory.com/m/409
+
 ### 🎈 JavaScript와 관련하여 same-origin 정책을 설명하세요.
 same-origin 정책은 JavaScript 도메인 경계를 넘어서 요청하는 것을 방지합니다. origin은 URI 체계, 호스트이름, 포트번호의 조합으로 정의됩니다. 이 정책은 한 페이지의 악의적인 스크립트가 해당 페이지의 DOM을 통해 다른 웹 페이지의 중요한 데이터에 접근하는 것을 방지합니다.
 
