@@ -19,6 +19,10 @@
 - [라인 - 개발자를 위한 친절한 UI 컴포넌트 라이브러리 만들기](https://engineering.linecorp.com/ko/blog/ui-component-library-for-developers-with-typescript-storybook/)
 - [라인 - Turborepo로 모노레포 개발 경험 향상하기](https://engineering.linecorp.com/ko/blog/monorepo-with-turborepo)
 - [우아한 형제들 - Yarn berry workspace를 활용한 프론트엔드 모노레포 구축기](https://techblog.woowahan.com/7976/)
+- [카카오 엔터테인먼트 - React 이벤트와 브라우저 이벤트](https://fe-developers.kakaoent.com/2022/220908-react-event-and-browser-event/)
+
+### CI/CD
+- [뱅크셀러드 - 뱅크샐러드 Web chapter에서 GitHub Action 기반의 CI 속도를 개선한 방법](https://blog.banksalad.com/tech/github-action-npm-cache)
 
 ### JavaScript
 - [카카오 엔터테인먼트 - 자바스크립트의 새로운 기능들](https://fe-developers.kakaoent.com/2022/220728-es2022/?fbclid=IwAR1TlzBTBw1zNnp1uvQGyF8EuDphYEcoGeuRM4wXBcsghUt3D5lAIXpcPGo)
@@ -30,3 +34,16 @@
 - [우아한 형제들 - 공통시스템개발팀 코드 리뷰 문화 개선 이야기](https://techblog.woowahan.com/7152/)
 - [라인 - 효과적인 코드 리뷰를 위해서](https://engineering.linecorp.com/ko/blog/effective-codereview)
 - [뱅크샐러드 - 코드 리뷰 in 뱅크샐러드 개발 문화](https://blog.banksalad.com/tech/banksalad-code-review-culture/)
+
+### 컨퍼런스
+- [인프콘 2022](https://www.inflearn.com/course/infcon2022)
+  - [나도 내 코드의 문제를 찾고 싶다고요?! - 테스트할 때 기억할 7가지](https://infcon.day/speaker/%ed%95%9c%ec%a3%bc%ec%8a%b9-%ed%85%8c%ec%8a%a4%ed%8a%b8-%ea%b8%b0%ec%96%b5%ed%95%a0-7%ea%b0%80%ec%a7%80/)
+  - [Rust 크로스 플랫폼 프로그래밍](https://infcon.day/speaker/%ec%98%a5%ec%b0%ac%ed%98%b8-rust-%ed%81%ac%eb%a1%9c%ec%8a%a4-%ed%94%8c%eb%9e%ab%ed%8f%bc)
+  - [서버비 0원, 클라우드 큐 도입으로 해냈습니다!](https://infcon.day/speaker/%ec%a1%b0%ed%98%84%ec%98%81-%ed%81%b4%eb%9d%bc%ec%9a%b0%eb%93%9c-%ed%81%90-%ec%84%9c%eb%b2%84/)
+  - [개발자의 셀프 브랜딩](https://infcon.day/speaker/%ea%b9%80%eb%af%bc%ec%a4%80-%ea%b0%9c%eb%b0%9c%ec%9e%90-%ec%85%80%ed%94%84%eb%b8%8c%eb%9e%9c%eb%94%a9/)
+  - [언어와 함께 성장하기 - Node.js와 10년, v0.8부터 v16까지](https://infcon.day/speaker/%ea%b0%95%eb%8f%99%ed%95%9c-nodejs/)
+  - [성공하는 스터디를 만드는 10가지 방법 - 인출 위주의 스터디 여정기](https://infcon.day/speaker/%ed%95%9c%ec%9c%a4%ec%84%9d-%ec%84%b1%ea%b3%b5%ed%95%98%eb%8a%94-%ec%8a%a4%ed%84%b0%eb%94%94-%eb%b0%a9%eb%b2%95/)
+  - [FE 개발자도 할 수 있다! RESTful API 개발 (with Firebase, GCP)](https://infcon.day/speaker/%ec%a1%b0%ec%9d%80-%ed%94%84%eb%9f%b0%ed%8a%b8%ec%97%94%eb%93%9c-restful-api/)
+  - [운영 중인 Vue.js 웹 서비스를 타입스크립트로 다시 쓰기](https://infcon.day/speaker/%ec%9e%a5%ea%b8%b0%ed%9a%a8-vuejs-typescript/)
+  - [우리는 오늘도 성장합니다 - 인프랩 프런트엔드 업무 프로세스 변천사](https://infcon.day/speaker/%ec%9e%a5%ec%9a%b0%ed%98%84-%ec%9d%b8%ed%94%84%eb%9e%a9-%ec%84%b1%ec%9e%a5/)
+  - [Vanilla JS와 함께 지속가능한 프런트엔드 코드 만들기 - 인프런 수강 바구니 개선기](https://infcon.day/speaker/%ec%9d%b4%eb%ac%b8%ea%b8%b0-vanillajs/)
