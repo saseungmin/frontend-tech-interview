@@ -1,8 +1,8 @@
 # 😊 frontend-tech-interview
 - FrontEnd Tech Interview / 프론트엔드 기술 아티클 정리
 
-## 🍭 [프론트엔드 어머 이건 읽어야해!](https://github.com/saseungmin/frontend-tech-interview/tree/main/article)
-- 프론트엔드에서 흥미롭거나 읽을만한 아티클 및 공식문서 링크를 모아두는 장소
+## 🍭 [프론트엔드 어머 이건 봐야해!](https://github.com/saseungmin/frontend-tech-interview/tree/main/article)
+- 프론트엔드에서 흥미롭거나 읽을만한 아티클 및 공식문서, 영상 링크를 모아두는 장소
 
 ## 🍭 [HTML](https://github.com/saseungmin/frontend-tech-interview/tree/main/html)
 - `<script>`, `<script async>`, `<script defer>` 사이의 차이점

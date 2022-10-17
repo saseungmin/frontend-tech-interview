@@ -1,4 +1,4 @@
-## 👉 프론트엔드 어머 이건 읽어야해!
+## 👉 프론트엔드 어머 이건 봐야해!
 
 > 프론트엔드에서 흥미롭거나 읽을만한 아티클 및 공식문서 링크를 모아두는 장소
 
@@ -26,6 +26,7 @@
 
 ### JavaScript
 - [카카오 엔터테인먼트 - 자바스크립트의 새로운 기능들](https://fe-developers.kakaoent.com/2022/220728-es2022/?fbclid=IwAR1TlzBTBw1zNnp1uvQGyF8EuDphYEcoGeuRM4wXBcsghUt3D5lAIXpcPGo)
+- [토스 - CommonJS와 ESM에 모두 대응하는 라이브러리 개발하기: exports field](https://toss.tech/article/commonjs-esm-exports-field)
 
 ### 유튜브
 - [토스 - JavaScript Bundle Diet](https://www.youtube.com/watch?v=EP7g5R-7zwM&ab_channel=%ED%86%A0%EC%8A%A4)
@@ -47,3 +48,6 @@
   - [운영 중인 Vue.js 웹 서비스를 타입스크립트로 다시 쓰기](https://infcon.day/speaker/%ec%9e%a5%ea%b8%b0%ed%9a%a8-vuejs-typescript/)
   - [우리는 오늘도 성장합니다 - 인프랩 프런트엔드 업무 프로세스 변천사](https://infcon.day/speaker/%ec%9e%a5%ec%9a%b0%ed%98%84-%ec%9d%b8%ed%94%84%eb%9e%a9-%ec%84%b1%ec%9e%a5/)
   - [Vanilla JS와 함께 지속가능한 프런트엔드 코드 만들기 - 인프런 수강 바구니 개선기](https://infcon.day/speaker/%ec%9d%b4%eb%ac%b8%ea%b8%b0-vanillajs/)
+- [FEConf 2022](https://2022.feconf.kr/)
+  - [Track A](https://www.youtube.com/watch?v=jZNk-Ncez6E&ab_channel=FEConfKorea)
+  - [Track B](https://www.youtube.com/watch?v=ajtpcFkXqqg&ab_channel=FEConfKorea)
