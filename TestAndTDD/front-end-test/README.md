@@ -19,7 +19,7 @@ describe('Some Component', () => {
       const { container } = renderComponent();
 
       // ...
-	  });
+    });
   });
 
   context('모바일이 아닌 경우', () => {
@@ -66,20 +66,20 @@ describe('Some Component', () => {
   ));
 
   context('모바일인 경우', () => {
-	  given('isMobile', () => true);
+    given('isMobile', () => true);
 
     it('버튼이 보여야 한다', () => {
-  	  const { container } = renderComponent();
+      const { container } = renderComponent();
 
       // ...
     });
   });
 
   context('모바일이 아닌 경우', () => {
-	  given('isMobile', () => false);
+    given('isMobile', () => false);
 
     it('버튼은 보이지 않아야만 한다', () => {
-	    const { container } = renderComponent();
+      const { container } = renderComponent();
 
       // ...
     });
