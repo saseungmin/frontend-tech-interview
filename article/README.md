@@ -60,3 +60,4 @@
 - [FEConf 2022](https://2022.feconf.kr/)
   - [Track A](https://www.youtube.com/watch?v=jZNk-Ncez6E&ab_channel=FEConfKorea)
   - [Track B](https://www.youtube.com/watch?v=ajtpcFkXqqg&ab_channel=FEConfKorea)
+- [if(kakao)dev 2022 front-end session](https://if.kakao.com/session?f.2gB2OPT7YO.GgWcMRm0cNSS=fe)
