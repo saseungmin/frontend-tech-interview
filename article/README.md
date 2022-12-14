@@ -22,6 +22,7 @@
 - [카카오 엔터테인먼트 - React 이벤트와 브라우저 이벤트](https://fe-developers.kakaoent.com/2022/220908-react-event-and-browser-event/)
 - [[번역] 우리가 Next.js로 리액트 로딩 시간을 70% 개선한 방법](https://velog.io/@cookie004/improved-react-loading-times-with-nextjs?utm_source=substack&utm_medium=email)
 - [(번역) 우리가 CSS-in-JS와 헤어지는 이유](https://junghan92.medium.com/%EB%B2%88%EC%97%AD-%EC%9A%B0%EB%A6%AC%EA%B0%80-css-in-js%EC%99%80-%ED%97%A4%EC%96%B4%EC%A7%80%EB%8A%94-%EC%9D%B4%EC%9C%A0-a2e726d6ace6)
+- [(번역) Next.js 작동 방식](https://velog.io/@surim014/how-next.js-works?utm_source=substack&utm_medium=email)
 
 ### CI/CD
 - [뱅크셀러드 - 뱅크샐러드 Web chapter에서 GitHub Action 기반의 CI 속도를 개선한 방법](https://blog.banksalad.com/tech/github-action-npm-cache)
