@@ -30,10 +30,11 @@
 ### 함수형
 - [(번역) 어쨌든 함수형 프로그래밍의 장점은 뭔가요?](https://junghan92.medium.com/%EB%B2%88%EC%97%AD-%EC%96%B4%EC%A8%8C%EB%93%A0-%ED%95%A8%EC%88%98%ED%98%95-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%EC%9D%98-%EC%9E%A5%EC%A0%90%EC%9D%80-%EB%AD%94%EA%B0%80%EC%9A%94-a57f37872e4)
 
-### JavaScript
+### JavaScript & TypeScript
 - [카카오 엔터테인먼트 - 자바스크립트의 새로운 기능들](https://fe-developers.kakaoent.com/2022/220728-es2022/?fbclid=IwAR1TlzBTBw1zNnp1uvQGyF8EuDphYEcoGeuRM4wXBcsghUt3D5lAIXpcPGo)
 - [토스 - CommonJS와 ESM에 모두 대응하는 라이브러리 개발하기: exports field](https://toss.tech/article/commonjs-esm-exports-field)
 - [(번역) 자바스크립트 웹 프레임워크의 새로운 흐름](https://ykss.netlify.app/translation/the_new_wave_of_javascript_web_frameworks/?utm_source=substack&utm_medium=email)
+- [우아한 형제들 - 우리 팀의 우아한 타입스크립트 컨벤션 정하기 여정](https://techblog.woowahan.com/9804)
 
 ### 테스트
 - [[번역] 프런트엔드 단위 테스트 모범 사례](https://velog.io/@surim014/frontend-unit-testing-best-practices?utm_source=substack&utm_medium=email)
