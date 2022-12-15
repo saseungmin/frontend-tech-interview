@@ -2,6 +2,21 @@
 
 > 프론트엔드에서 흥미롭거나 읽을만한 아티클 및 공식문서 링크를 모아두는 장소
 
+### 💻 국내 기업 기술 블로그
+- [네이버 D2](https://d2.naver.com/home)
+- [카카오](https://tech.kakao.com/blog/)
+- [카카오 페이](https://tech.kakaopay.com/)
+- [카카오 엔터테인먼트](https://fe-developers.kakaoent.com/)
+- [카카오 스타일](https://devblog.kakaostyle.com/ko/)
+- [라인](https://engineering.linecorp.com/ko/blog)
+- [우아한 형제들](https://techblog.woowahan.com/)
+- [토스](https://toss.tech/)
+- [당근마켓](https://medium.com/daangn/development/home)
+- [직방](https://medium.com/zigbang)
+- [뱅크샐러드](https://blog.banksalad.com/tech/)
+- [NHN](https://meetup.toast.com/)
+- [하이퍼커넥트](https://hyperconnect.github.io/)
+
 ### React
 - [카카오 페이 - React Query와 함께 Concurrent UI Pattern을 도입하는 방법](https://tech.kakaopay.com/post/react-query-2/)
 - [우아한 형제들 - 만들어 가며 알아보는 React: React는 왜 성공했나](https://techblog.woowahan.com/8311/?fbclid=IwAR1Jz6HEffNrDZuj3SBc5J-fCHw6PuOK7d5Uywi6V5fcng2Ijpowck__ofo)
