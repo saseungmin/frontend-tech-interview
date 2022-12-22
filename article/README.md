@@ -38,6 +38,7 @@
 - [[번역] 우리가 Next.js로 리액트 로딩 시간을 70% 개선한 방법](https://velog.io/@cookie004/improved-react-loading-times-with-nextjs?utm_source=substack&utm_medium=email)
 - [(번역) 우리가 CSS-in-JS와 헤어지는 이유](https://junghan92.medium.com/%EB%B2%88%EC%97%AD-%EC%9A%B0%EB%A6%AC%EA%B0%80-css-in-js%EC%99%80-%ED%97%A4%EC%96%B4%EC%A7%80%EB%8A%94-%EC%9D%B4%EC%9C%A0-a2e726d6ace6)
 - [(번역) Next.js 작동 방식](https://velog.io/@surim014/how-next.js-works?utm_source=substack&utm_medium=email)
+- [카카오 엔터테인먼트 - React의 Error Boundary를 이용하여 효과적으로 에러 처리하기](https://fe-developers.kakaoent.com/2022/221110-error-boundary/)
 
 ### CI/CD
 - [뱅크셀러드 - 뱅크샐러드 Web chapter에서 GitHub Action 기반의 CI 속도를 개선한 방법](https://blog.banksalad.com/tech/github-action-npm-cache)
@@ -50,6 +51,7 @@
 - [토스 - CommonJS와 ESM에 모두 대응하는 라이브러리 개발하기: exports field](https://toss.tech/article/commonjs-esm-exports-field)
 - [(번역) 자바스크립트 웹 프레임워크의 새로운 흐름](https://ykss.netlify.app/translation/the_new_wave_of_javascript_web_frameworks/?utm_source=substack&utm_medium=email)
 - [우아한 형제들 - 우리 팀의 우아한 타입스크립트 컨벤션 정하기 여정](https://techblog.woowahan.com/9804)
+- [카카오 엔터테인먼트 - Typescript - Union Type, Intersection Type, Etc.](https://fe-developers.kakaoent.com/2022/221124-typescript-tip/)
 
 ### 테스트
 - [[번역] 프런트엔드 단위 테스트 모범 사례](https://velog.io/@surim014/frontend-unit-testing-best-practices?utm_source=substack&utm_medium=email)
@@ -61,6 +63,9 @@
 - [우아한 형제들 - 공통시스템개발팀 코드 리뷰 문화 개선 이야기](https://techblog.woowahan.com/7152/)
 - [라인 - 효과적인 코드 리뷰를 위해서](https://engineering.linecorp.com/ko/blog/effective-codereview)
 - [뱅크샐러드 - 코드 리뷰 in 뱅크샐러드 개발 문화](https://blog.banksalad.com/tech/banksalad-code-review-culture/)
+
+### 기타
+- [카카오 엔터테인먼트 - SEO 개선 초심자 가이드](https://fe-developers.kakaoent.com/2022/221208-basic-seo-guide/)
 
 ### 컨퍼런스
 - [인프콘 2022](https://www.inflearn.com/course/infcon2022)
