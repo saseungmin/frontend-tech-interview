@@ -28,6 +28,8 @@
 - 고차 함수(higher-order function)의 정의는 무엇인가요?
 - 비동기 프로그래밍
 
+## 🍭 [TypeScript](https://github.com/saseungmin/frontend-tech-interview/tree/main/typescript)
+
 ## 🍭 [CSS](https://github.com/saseungmin/frontend-tech-interview/tree/main/css)
 - Resetting과 Normalizing CSS의 차이점은 무엇인가요?
 - `* { box-sizing: border-box; }`는 무엇을 하나요? 장점은 무엇인가요?
