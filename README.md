@@ -29,6 +29,7 @@
 - 비동기 프로그래밍
 
 ## 🍭 [TypeScript](https://github.com/saseungmin/frontend-tech-interview/tree/main/typescript)
+- 타입과 인터페이스의 차이점
 
 ## 🍭 [CSS](https://github.com/saseungmin/frontend-tech-interview/tree/main/css)
 - Resetting과 Normalizing CSS의 차이점은 무엇인가요?
