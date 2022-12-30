@@ -52,6 +52,9 @@
 - [재조정(Reconciliation)](https://github.com/saseungmin/frontend-tech-interview/blob/main/react/reconciliation.md)
 - [When to `useMemo` and `useCallback`](https://github.com/saseungmin/frontend-tech-interview/blob/main/react/when-to-useMemo-and-useCallback.md)
 
+## 🍭 [Front-end](https://github.com/saseungmin/frontend-tech-interview/tree/main/front-end)
+- Yarn Berry를 사용하는 이유
+
 ## 🍭 [web](https://github.com/saseungmin/frontend-tech-interview/tree/main/web)
 - CSR vs SSR
 - 프론트엔드 렌더링: SSG vs ISG vs SSR vs CSR
