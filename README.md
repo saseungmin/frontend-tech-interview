@@ -64,6 +64,8 @@
 - [CORS는 왜 이렇게 우리를 힘들게 하는걸까?](https://github.com/saseungmin/frontend-tech-interview/tree/main/web/cors)
 - [브라우저의 동작 원리](https://github.com/saseungmin/frontend-tech-interview/tree/main/web/%EB%B8%8C%EB%9D%BC%EC%9A%B0%EC%A0%80%EC%9D%98%20%EB%8F%99%EC%9E%91%20%EC%9B%90%EB%A6%AC)
 - Webpack이란 무엇인가?
+- Babel vs Terser vs SWC
+- 컴파일러 vs 트랜스파일러
 
 ## 🍭 [Test와 TDD에 대한 정리](https://github.com/saseungmin/frontend-tech-interview/tree/main/TestAndTDD)
 - [함께 자라기](https://github.com/saseungmin/frontend-tech-interview/blob/main/TestAndTDD/%ED%95%A8%EA%BB%98%EC%9E%90%EB%9D%BC%EA%B8%B0.md)
