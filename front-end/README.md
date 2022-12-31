@@ -24,3 +24,8 @@ yarn PnP은 의존성을 압축 파일로 관리하기 때문에 의존성의 �
 이처럼 의존성을 버전 관리에 포함하면 새로 저장소를 복제하거나 브랜치를 바꾸었다고 해서 yarn install을 실행하지 않아도 되고 이에 따라 CI에서 의존성 설치하는 시간을 크게 절약할 수 있습니다.
 
 > https://toss.tech/article/node-modules-and-yarn-berry
+
+### 🎈 Next.js의 작동 방식
+
+> https://nextjs.org/learn/foundations/how-nextjs-works
+> https://velog.io/@surim014/how-next.js-works
