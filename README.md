@@ -55,6 +55,8 @@
 ## 🍭 [Front-end](https://github.com/saseungmin/frontend-tech-interview/tree/main/front-end)
 - Yarn Berry를 사용하는 이유
 - Next.js의 작동 방식
+- Vercel Edge Function
+- Vercel Edge Middleware
 
 ## 🍭 [web](https://github.com/saseungmin/frontend-tech-interview/tree/main/web)
 - CSR vs SSR
