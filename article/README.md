@@ -52,6 +52,7 @@
 - [(번역) 자바스크립트 웹 프레임워크의 새로운 흐름](https://ykss.netlify.app/translation/the_new_wave_of_javascript_web_frameworks/?utm_source=substack&utm_medium=email)
 - [우아한 형제들 - 우리 팀의 우아한 타입스크립트 컨벤션 정하기 여정](https://techblog.woowahan.com/9804)
 - [카카오 엔터테인먼트 - Typescript - Union Type, Intersection Type, Etc.](https://fe-developers.kakaoent.com/2022/221124-typescript-tip/)
+- [(번역)더 좋은 타입스크립트 프로그래머로 만드는 11가지 팁](https://velog.io/@lky5697/11-tips-that-help-you-become-a-better-typescript-programmer)
 
 ### 테스트
 - [[번역] 프런트엔드 단위 테스트 모범 사례](https://velog.io/@surim014/frontend-unit-testing-best-practices?utm_source=substack&utm_medium=email)
