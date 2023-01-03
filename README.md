@@ -27,6 +27,7 @@
 - 동기, 비동기 함수의 차이점을 설명하세요.
 - 고차 함수(higher-order function)의 정의는 무엇인가요?
 - 비동기 프로그래밍
+- Chart.js vs D3.js
 
 ## 🍭 [TypeScript](https://github.com/saseungmin/frontend-tech-interview/tree/main/typescript)
 - 타입과 인터페이스의 차이점
