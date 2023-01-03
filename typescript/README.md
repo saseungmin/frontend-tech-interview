@@ -1,6 +1,6 @@
 # 👉 TypeScript
 
-## 🥕 [타입과 인터페이스의 차이점](https://saseungmin.github.io/reading_books_record_repository/docs/typescript/effective-typescript/chapter-1#-%EC%95%84%EC%9D%B4%ED%85%9C-3-%EC%BD%94%EB%93%9C-%EC%83%9D%EC%84%B1%EA%B3%BC-%ED%83%80%EC%9E%85%EC%9D%B4-%EA%B4%80%EA%B3%84%EC%97%86%EC%9D%8C%EC%9D%84-%EC%9D%B4%ED%95%B4%ED%95%98%EA%B8%B0)
+## 🥕 [타입과 인터페이스의 차이점](https://saseungmin.github.io/reading_books_record_repository/docs/typescript/effective-typescript/chapter-2#-%EC%95%84%EC%9D%B4%ED%85%9C-13-%ED%83%80%EC%9E%85%EA%B3%BC-%EC%9D%B8%ED%84%B0%ED%8E%98%EC%9D%B4%EC%8A%A4%EC%9D%98-%EC%B0%A8%EC%9D%B4%EC%A0%90-%EC%95%8C%EA%B8%B0)
 타입스크립트에서 명명된 타입을 정의하는 방법은 두 가지가 있습니다.
 
 ```ts
