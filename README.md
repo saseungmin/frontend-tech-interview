@@ -58,6 +58,7 @@
 - Next.js의 작동 방식
 - Vercel Edge Function
 - Vercel Edge Middleware
+- 모노레포란?
 
 ## 🍭 [web](https://github.com/saseungmin/frontend-tech-interview/tree/main/web)
 - CSR vs SSR
