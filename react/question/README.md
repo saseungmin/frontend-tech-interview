@@ -20,7 +20,16 @@ Hooks를 사용하면 로직의 재사용이 가능하고 관리가 쉽다는 �
 class component는 여러 단계의 상속으로 이루어져 있습니다. 그리하여 복잡성과 오류 가능성을 증가시켰습니다. 결국 class component는 테스트하기 어렵습니다. 이로 인해 Function Component가 탄생하게 되었고, class component는 라이플 사이클을 가지면 이로인해 각각 생명주기 메소드에 대해 알고 있어야 합니다. 또한, class Component에서 this 사용은 어려움을 느낄 수도 있습니다. 하지만 Function Component는 이러한 기능을 hook을 사용하여 생명주기에 원하는 동작을 하게 합니다.
 
 ### 🎈 virtual DOM이 무엇인가요? virtual DOM이 좋은 이유에 대해서 설명하세요.
-virtual DOM은 실제 DOM의 변화를 최소화 시켜주는 역할을 합니다. virtual DOM을 사용하는 이유는 효율성 때문입니다. virtual DOM을 활용하면 실제 DOM을 바꾸는 것보다 시간 복잡도가 낮아집니다. 만약 HTML 파일에 20개의 변화가 생기면 과정 역시 20회가 이루어집니다. 하지만 virtual DOM은 변화된 부분만 가려내여 실제 DOM에 전달하기에 실제 DOM은 1회로 인식하여 단 한번만의 렌더링 과정만 거치게 됩니다.
+virtual DOM은 실제 DOM의 변화를 최소화 시켜주는 역할을 합니다. virtual DOM을 사용하는 이유는 효율성 때문입니다. virtual DOM을 활용하면 실제 DOM을 바꾸는 것보다 시간 복잡도가 낮아집니다. 만약 HTML 파일에 20개의 변화가 생기면 과정 역시 20회가 이루어집니다. 하지만 virtual DOM은 변화된 부분만 가려내여 실제 DOM에 전달하기에 실제 DOM은 1회로 인식하여 단 한번만의 렌더링 과정만 거치게 됩니다.    
+
+#### 공식 문서
+가상 DOM(VDOM)은 UI의 이상적인 또는 "virtual" 표현이 메모리에 유지되고 ReactDOM과 같은 라이브러리에 의해 "real" DOM과 동기화되는 프로그래밍 개념입니다. 이 프로세스를 reconciliation(재조정) 이라고 합니다 .   
+
+이 접근 방식은 React의 선언적 API를 가능하게 합니다.: React에 UI를 원하는 상태를 지정하면 DOM이 해당 상태와 일치하는지 확인합니다. 이러한 방식은 앱 구축에 사용해야 하는 어트리뷰트 조작, 이벤트 처리, 수동 DOM 업데이트를 추상화합니다.   
+
+“virtual DOM”은 특정 기술이라기보다는 패턴에 가깝기 때문에 사람들마다 의미하는 바가 다릅니다. React의 세계에서 “virtual DOM”이라는 용어는 보통 사용자 인터페이스를 나타내는 객체이기 때문에 React elements와 연관됩니다. 그러나 React는 컴포넌트 트리에 대한 추가 정보를 포함하기 위해 “fibers”라는 내부 객체를 사용합니다. 또한 React에서 “virtual DOM” 구현의 일부로 간주할 수 있습니다.
+
+> [공식 문서](https://reactjs.org/docs/faq-internals.html)
 
 ### 🎈 웹 성능 향상을 위해 최적화를 해 본 경험이 있나요? 혹은 useMemo와 useCallback 메소드를 활용해 최적화하는 원리에 대해서 설명하세요.
 `useMemo`와 `useCallback`은 성능 최적화를 위해서 사용되는 Hook입니다. 이 때, `useMemo`는 특정 결과 값을 재사용하는 반면에 `useCallback`은 특정함수를 새로 만들지 않고 재사용하고 싶을 때 사용합니다. 이 둘은 dependency 리스트를 이용하여 그 중 하나가 변경이 되면 결과에 대해 변경됩니다.
