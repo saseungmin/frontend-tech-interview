@@ -45,3 +45,10 @@ Concurrent mode를 사용하면 사용자 경험에서 아주 중요한 역할�
 
 - https://reactjs.org/blog/2022/03/29/react-v18.html#what-is-concurrent-react
 - https://velog.io/@cadenzah/react-concurrent-mode
+
+### 🎈 Hydrate란?
+Hydrate는 SSR에서 사용되는 개념입니다. SSR의 경우 pre-rendering를 통해 완성된 HTML을 클라이언트에게 전달합니다. 이렇게 서버에서 렌더링된 정적 페이지를 클라이언트에게 보내고, react는 번들링된 JavaScript 코드를 클라이언트에게 보냅니다. 클라이언트는 전달받은 HTML과 JS코드를 매칭하는 Hydrate를 수행합니다. Hydrate란 전송받은 JavaScript들이 이전에 보내진 HTML DOM 요소 위에서 한번 더 렌더링 하게 되면서 각각 자기 자리를 찾아가며 매칭되는 것입니다. Hydrate 후에는 클릭과 같은 이벤트나 모듈들이 적용되어 사용자 조작이 가능해집니다.   
+
+즉, Hydrate는 클라이언트 측 JavaScript가 정적 호스팅 또는 서버 측 렌더링을 통해 전달되는 정적 HTML 요소에 이벤트 핸들러를 첨부하여 동적 웹 페이지로 변환하는 기술입니다.   
+
+React 18 이전에는 한 번 hydration이 시작되면 전체 트리가 완전히 hydration이 되기 전까지는 유저는 hydration이 불필요한 다른 영역과 상호작용을 할 수 없었습니다. 하지만 react 18 버전에서 suspense를 사용한 concurrent mode를 사용할 수 있게 되면서 필요한 부분만 hydration이 가능하며, 기존에 hydration을 하기 위해서는 모두 불러와야하는 문제도 lazy를 사용한 코드 스플리팅으로 해결할 수 있게 되었습니다.
