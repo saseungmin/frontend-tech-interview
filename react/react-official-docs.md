@@ -85,3 +85,49 @@ state를 끌어올리는 작업은 양방향 바인딩 접근 방식보다 더 �
 props와 합성은 명시적이고 안전한 방법으로 컴포넌트의 모양과 동작을 커스터마이징하는데 필요한 모든 유연성을 제공합니다. 컴포넌트가 원시 타입의 값, React 엘리먼트 혹은 함수 등 어떠한 props도 받을 수 있다는 것을 기억하세요.   
 
 UI가 아닌 기능을 여러 컴포넌트에서 재사용하기를 원한다면, 별도의 JavaScript 모듈로 분리하는 것이 좋습니다. 컴포넌트에서 해당 함수, 객체, 클래스 등을 import 하여 사용할 수 있습니다.   
+
+### [Context](https://ko.reactjs.org/docs/context.html)
+일반적인 React 애플리케이션에서 데이터는 위에서 아래로 (즉, 부모로부터 자식에게) props를 통해 전달되지만, 애플리케이션 안의 여러 컴포넌트들에 전해줘야 하는 props의 경우 (예를 들면 선호 로케일, UI 테마) 이 과정이 번거로울 수 있습니다. context를 이용하면, 트리 단계마다 명시적으로 props를 넘겨주지 않아도 많은 컴포넌트가 이러한 값을 공유하도록 할 수 있습니다.   
+
+#### [context를 사용하기 전에 고려할 것](https://ko.reactjs.org/docs/context.html#before-you-use-context)
+context의 주된 용도는 다양한 레벨에 네스팅(중첩)된 많은 컴포넌트에게 데이터를 전달하는 것입니다. context를 사용하면 컴포넌트를 재사용하기가 어려워지므로 꼭 필요할 때만 쓰세요.   
+
+**여러 레벨에 걸쳐 props 넘기는 걸 대체하는 데에 context보다 [컴포넌트 합성](https://ko.reactjs.org/docs/composition-vs-inheritance.html)이 더 간단한 해결책일 수도 있습니다.**   
+
+제어의 역전(inversion of control) 을 이용하면 넘겨줘야 하는 props의 수는 줄고 최상위 컴포넌트의 제어력은 더 커지기 때문에 더 깔끔한 코드를 쓸 수 있는 경우가 많습니다. 하지만 이러한 역전이 항상 옳은 것은 아닙니다. 복잡한 로직을 상위로 옮기면 이 상위 컴포넌트들은 더 난해해지기 마련이고 하위 컴포넌트들은 필요 이상으로 유연해져야 합니다.   
+
+#### [주의사항](https://ko.reactjs.org/docs/context.html#caveats)
+다시 렌더링할지 여부를 정할 때 참조(reference)를 확인하기 때문에, Provider의 부모가 렌더링 될 때마다 불필요하게 하위 컴포넌트가 다시 렌더링 되는 문제가 생길 수도 있습니다. 예를 들어 아래 코드는 `value`가 바뀔 때마다 매번 새로운 객체가 생성되므로 Provider가 렌더링 될 때마다 그 하위에서 구독하고 있는 컴포넌트 모두가 다시 렌더링 될 것입니다.   
+
+```jsx
+class App extends React.Component {
+  render() {
+    return (
+      <MyContext.Provider value={{something: 'something'}}>
+        <Toolbar />
+      </MyContext.Provider>
+    );
+  }
+}
+```
+
+이를 피하기 위해서는 값을 부모의 state로 끌어올리세요.
+
+```jsx
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      value: {something: 'something'},
+    };
+  }
+
+  render() {
+    return (
+      <MyContext.Provider value={this.state.value}>
+        <Toolbar />
+      </MyContext.Provider>
+    );
+  }
+}
+```
