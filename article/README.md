@@ -41,6 +41,7 @@
 - [카카오 엔터테인먼트 - React의 Error Boundary를 이용하여 효과적으로 에러 처리하기](https://fe-developers.kakaoent.com/2022/221110-error-boundary/)
 - [Index as a key is an anti-pattern (키로서의 인덱스는 안티 패턴입니다.)](https://robinpokorny.medium.com/index-as-a-key-is-an-anti-pattern-e0349aece318)
 - [ReactJS: Props vs. State](https://lucybain.com/blog/2016/react-state-vs-pros/)
+- [Use a Render Prop!](https://medium.com/@mjackson/use-a-render-prop-50de598f11ce)
 
 ### CI/CD
 - [뱅크셀러드 - 뱅크샐러드 Web chapter에서 GitHub Action 기반의 CI 속도를 개선한 방법](https://blog.banksalad.com/tech/github-action-npm-cache)
