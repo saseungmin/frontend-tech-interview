@@ -87,3 +87,4 @@
   - [Track A](https://www.youtube.com/watch?v=jZNk-Ncez6E&ab_channel=FEConfKorea)
   - [Track B](https://www.youtube.com/watch?v=ajtpcFkXqqg&ab_channel=FEConfKorea)
 - [if(kakao)dev 2022 front-end session](https://if.kakao.com/session?f.2gB2OPT7YO.GgWcMRm0cNSS=fe)
+- [Naver Deview 2023](https://deview.kr/2023/sessions)
