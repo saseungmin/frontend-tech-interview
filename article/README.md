@@ -56,9 +56,11 @@
 - [우아한 형제들 - 우리 팀의 우아한 타입스크립트 컨벤션 정하기 여정](https://techblog.woowahan.com/9804)
 - [카카오 엔터테인먼트 - Typescript - Union Type, Intersection Type, Etc.](https://fe-developers.kakaoent.com/2022/221124-typescript-tip/)
 - [(번역)더 좋은 타입스크립트 프로그래머로 만드는 11가지 팁](https://velog.io/@lky5697/11-tips-that-help-you-become-a-better-typescript-programmer)
+- [똑똑하게 브라우저 Polyfill 관리하기](https://toss.tech/article/smart-polyfills)
 
 ### 테스트
 - [[번역] 프런트엔드 단위 테스트 모범 사례](https://velog.io/@surim014/frontend-unit-testing-best-practices?utm_source=substack&utm_medium=email)
+- [(번역) 내가 작성한 Jest 테스트는 왜 이렇게 느릴까?](https://velog.io/@sehyunny/why-is-my-jest-test-suit-so-slow)
 
 ### 유튜브
 - [토스 - JavaScript Bundle Diet](https://www.youtube.com/watch?v=EP7g5R-7zwM&ab_channel=%ED%86%A0%EC%8A%A4)
