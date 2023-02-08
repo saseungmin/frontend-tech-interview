@@ -42,6 +42,7 @@
 - [Index as a key is an anti-pattern (키로서의 인덱스는 안티 패턴입니다.)](https://robinpokorny.medium.com/index-as-a-key-is-an-anti-pattern-e0349aece318)
 - [ReactJS: Props vs. State](https://lucybain.com/blog/2016/react-state-vs-pros/)
 - [Use a Render Prop!](https://medium.com/@mjackson/use-a-render-prop-50de598f11ce)
+- [(번역) ‘Create React App 권장을 Vite로 대체’ PR 대한 Dan Abramov의 답변](https://junghan92.medium.com/%EB%B2%88%EC%97%AD-create-react-app-%EA%B6%8C%EC%9E%A5%EC%9D%84-vite%EB%A1%9C-%EB%8C%80%EC%B2%B4-pr-%EB%8C%80%ED%95%9C-dan-abramov%EC%9D%98-%EB%8B%B5%EB%B3%80-3050b5678ac8)
 
 ### CI/CD
 - [뱅크셀러드 - 뱅크샐러드 Web chapter에서 GitHub Action 기반의 CI 속도를 개선한 방법](https://blog.banksalad.com/tech/github-action-npm-cache)
