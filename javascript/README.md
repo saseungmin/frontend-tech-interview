@@ -146,12 +146,12 @@ Strict 모드는 JavaScript 다양한 자바스크립트를 제한하는 방법�
 
 > https://www.howdy-mj.me/javascript/asynchronous-programming
 
-### Chart.js vs D3.js (경험의 의한 개인적인 비교)
+### 🎈 Chart.js vs D3.js (경험의 의한 개인적인 비교)
 Chart.js는 기본 유형의 그래프가 주어진 데이터를 가장 쉽게 해석하고 프로젝트 제작 기간이 짧을 경우 사용하면 좋습니다. 그리고 Chart.js를 사용한 라이브러리도 존재하여 React와 같은 프런트엔드 JavaScript 프레임워크 내에서도 사용하기 쉽습니다. 또한, Chart.js는 문서화도 잘 되어 있어있습니다. 이에 비해 D3.js는 학습 곡선이 훨씬 더 크지만 문서화는 Chart.js에 비해 아쉬운 부분이 있습니다. 그치만, Chart.js에 비해 훨씬 더 많은 custom을 할 수 있으며 다양한 그래프 유형이 많습니다.
 
 ![chartjs-vs-d3js](../images/chartjs-vs-d3js.png)
 
-### 자바스크립트 가비지 컬렉션
+### 🎈 자바스크립트 가비지 컬렉션
 자바스크립트는 도달 가능성(reachability) 이라는 개념을 사용해 메모리 관리를 수행합니다.   
 ‘도달 가능한(reachable)’ 값은 쉽게 말해 어떻게든 접근하거나 사용할 수 있는 값을 의미합니다. 도달 가능한 값은 메모리에서 삭제되지 않습니다.
 
