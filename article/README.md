@@ -43,6 +43,7 @@
 - [ReactJS: Props vs. State](https://lucybain.com/blog/2016/react-state-vs-pros/)
 - [Use a Render Prop!](https://medium.com/@mjackson/use-a-render-prop-50de598f11ce)
 - [(번역) ‘Create React App 권장을 Vite로 대체’ PR 대한 Dan Abramov의 답변](https://junghan92.medium.com/%EB%B2%88%EC%97%AD-create-react-app-%EA%B6%8C%EC%9E%A5%EC%9D%84-vite%EB%A1%9C-%EB%8C%80%EC%B2%B4-pr-%EB%8C%80%ED%95%9C-dan-abramov%EC%9D%98-%EB%8B%B5%EB%B3%80-3050b5678ac8)
+- [(번역) Concurrent 리액트에 대해 알아야 할 모든 것(그리고 Suspense에 대해서 약간)](https://velog.io/@superlipbalm/everything-you-need-to-know-about-concurrent-react)
 
 ### CI/CD
 - [뱅크셀러드 - 뱅크샐러드 Web chapter에서 GitHub Action 기반의 CI 속도를 개선한 방법](https://blog.banksalad.com/tech/github-action-npm-cache)
@@ -58,6 +59,8 @@
 - [카카오 엔터테인먼트 - Typescript - Union Type, Intersection Type, Etc.](https://fe-developers.kakaoent.com/2022/221124-typescript-tip/)
 - [(번역)더 좋은 타입스크립트 프로그래머로 만드는 11가지 팁](https://velog.io/@lky5697/11-tips-that-help-you-become-a-better-typescript-programmer)
 - [똑똑하게 브라우저 Polyfill 관리하기](https://toss.tech/article/smart-polyfills)
+- [[번역] 자바스크립트 가비지 컬렉터 실험](https://velog.io/@surim014/Experiments-with-the-JavaScript-Garbage-Collector)
+- [[번역] 코드 품질을 높여주는 고급 자바스크립트 함수](https://velog.io/@typo/advanced-javascript-functions-to-improve-code-quality)
 
 ### 테스트
 - [[번역] 프런트엔드 단위 테스트 모범 사례](https://velog.io/@surim014/frontend-unit-testing-best-practices?utm_source=substack&utm_medium=email)
@@ -73,6 +76,7 @@
 
 ### 기타
 - [카카오 엔터테인먼트 - SEO 개선 초심자 가이드](https://fe-developers.kakaoent.com/2022/221208-basic-seo-guide/)
+- [(번역) 2023년 웹 개발 트렌드 10가지](https://ykss.netlify.app/translation/10_web_development_trends_in_2023)
 
 ### 컨퍼런스
 - [인프콘 2022](https://www.inflearn.com/course/infcon2022)
