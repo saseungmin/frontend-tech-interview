@@ -17,7 +17,7 @@
 - [NHN](https://meetup.toast.com/)
 - [하이퍼커넥트](https://hyperconnect.github.io/)
 
-### React
+### React & Next.js
 - [카카오 페이 - React Query와 함께 Concurrent UI Pattern을 도입하는 방법](https://tech.kakaopay.com/post/react-query-2/)
 - [우아한 형제들 - 만들어 가며 알아보는 React: React는 왜 성공했나](https://techblog.woowahan.com/8311/?fbclid=IwAR1Jz6HEffNrDZuj3SBc5J-fCHw6PuOK7d5Uywi6V5fcng2Ijpowck__ofo)
 - [React 공식 문서 - React Labs: 우리가 작업 중인것 - 2022년 6월](https://reactjs.org/blog/2022/06/15/react-labs-what-we-have-been-working-on-june-2022.html)
@@ -44,6 +44,7 @@
 - [Use a Render Prop!](https://medium.com/@mjackson/use-a-render-prop-50de598f11ce)
 - [(번역) ‘Create React App 권장을 Vite로 대체’ PR 대한 Dan Abramov의 답변](https://junghan92.medium.com/%EB%B2%88%EC%97%AD-create-react-app-%EA%B6%8C%EC%9E%A5%EC%9D%84-vite%EB%A1%9C-%EB%8C%80%EC%B2%B4-pr-%EB%8C%80%ED%95%9C-dan-abramov%EC%9D%98-%EB%8B%B5%EB%B3%80-3050b5678ac8)
 - [(번역) Concurrent 리액트에 대해 알아야 할 모든 것(그리고 Suspense에 대해서 약간)](https://velog.io/@superlipbalm/everything-you-need-to-know-about-concurrent-react)
+- [(번역) Next.js의 app 디렉터리 아키텍처 이해하기](https://junghan92.medium.com/%EB%B2%88%EC%97%AD-next-js%EC%9D%98-app-%EB%94%94%EB%A0%89%ED%84%B0%EB%A6%AC-%EC%95%84%ED%82%A4%ED%85%8D%EC%B2%98-%EC%9D%B4%ED%95%B4%ED%95%98%EA%B8%B0-28672980d765)
 
 ### CI/CD
 - [뱅크셀러드 - 뱅크샐러드 Web chapter에서 GitHub Action 기반의 CI 속도를 개선한 방법](https://blog.banksalad.com/tech/github-action-npm-cache)
@@ -61,6 +62,10 @@
 - [똑똑하게 브라우저 Polyfill 관리하기](https://toss.tech/article/smart-polyfills)
 - [[번역] 자바스크립트 가비지 컬렉터 실험](https://velog.io/@surim014/Experiments-with-the-JavaScript-Garbage-Collector)
 - [[번역] 코드 품질을 높여주는 고급 자바스크립트 함수](https://velog.io/@typo/advanced-javascript-functions-to-improve-code-quality)
+- [[번역] ES2023에서 도입된 자바스크립트의 새로운 배열 복사 메서드](https://velog.io/@eunbinn/es2023-new-array-copying-methods-javascript)
+
+### CSS
+- [(번역) 더 나은 CSS 트랜지션 및 애니매이션을 위한 10가지 팁](https://ykss.netlify.app/translation/ten_tips_for_better_css_transitions_and_animations/)
 
 ### 테스트
 - [[번역] 프런트엔드 단위 테스트 모범 사례](https://velog.io/@surim014/frontend-unit-testing-best-practices?utm_source=substack&utm_medium=email)
@@ -95,3 +100,4 @@
   - [Track B](https://www.youtube.com/watch?v=ajtpcFkXqqg&ab_channel=FEConfKorea)
 - [if(kakao)dev 2022 front-end session](https://if.kakao.com/session?f.2gB2OPT7YO.GgWcMRm0cNSS=fe)
 - [Naver Deview 2023](https://deview.kr/2023/sessions)
+- [Toss Slash 2023](https://toss.im/slash-23)
