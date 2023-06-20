@@ -2,6 +2,11 @@
 
 > 프론트엔드에서 흥미롭거나 읽을만한 아티클 및 공식문서 링크를 모아두는 장소
 
+### IT 인사이트
+- [스타트업 스토리 플랫폼: 플래텀](https://platum.kr/)
+- [GeekNews - 개발/기술/스타트업 뉴스 서비스](https://news.hada.io/)
+- [Velog](https://velog.io/)
+
 ### 💻 국내 기업 기술 블로그
 - [네이버 D2](https://d2.naver.com/home)
 - [카카오](https://tech.kakao.com/blog/)

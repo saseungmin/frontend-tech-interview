@@ -1,6 +1,8 @@
 # 😊 frontend-tech-interview
 - 내가 보려고 정리한 FrontEnd Tech Interview / 프론트엔드 기술 아티클 정리
 
+> **PR은 언제나 환영입니다! 🎉**
+
 ## 🍭 [프론트엔드 어머 이건 봐야해!](https://github.com/saseungmin/frontend-tech-interview/tree/main/article)
 - 프론트엔드에서 흥미롭거나 읽을만한 아티클 및 공식문서, 영상 링크를 모아두는 장소
 
