@@ -1,0 +1,133 @@
+# 👉 프론트엔드 어머 이건 봐야해!
+
+> 프론트엔드에서 흥미롭거나 읽을만한 아티클 및 공식문서 링크를 모아두는 장소
+
+### IT 인사이트
+- [스타트업 스토리 플랫폼: 플래텀](https://platum.kr/)
+- [GeekNews - 개발/기술/스타트업 뉴스 서비스](https://news.hada.io/)
+- [Velog](https://velog.io/)
+- [Daily DevBlog 이메일 구독](http://daily-devblog.com/)
+- [Naver FE News 이메일 구독](https://fenews.substack.com/embed)
+- [Korea FE Article 이메일 구독](https://kofearticle.substack.com/)
+
+### 💻 국내 기업 기술 블로그
+- [네이버 D2](https://d2.naver.com/home)
+- [카카오](https://tech.kakao.com/blog/)
+- [카카오 페이](https://tech.kakaopay.com/)
+- [카카오 엔터테인먼트](https://fe-developers.kakaoent.com/)
+- [카카오 스타일](https://devblog.kakaostyle.com/ko/)
+- [라인](https://engineering.linecorp.com/ko/blog)
+- [우아한 형제들](https://techblog.woowahan.com/)
+- [토스](https://toss.tech/)
+- [당근마켓](https://medium.com/daangn/development/home)
+- [직방](https://medium.com/zigbang)
+- [뱅크샐러드](https://blog.banksalad.com/tech/)
+- [NHN](https://meetup.toast.com/)
+- [하이퍼커넥트](https://hyperconnect.github.io/)
+
+### React & Next.js
+- [카카오 페이 - React Query와 함께 Concurrent UI Pattern을 도입하는 방법](https://tech.kakaopay.com/post/react-query-2/)
+- [우아한 형제들 - 만들어 가며 알아보는 React: React는 왜 성공했나](https://techblog.woowahan.com/8311/?fbclid=IwAR1Jz6HEffNrDZuj3SBc5J-fCHw6PuOK7d5Uywi6V5fcng2Ijpowck__ofo)
+- [React 공식 문서 - React Labs: 우리가 작업 중인것 - 2022년 6월](https://reactjs.org/blog/2022/06/15/react-labs-what-we-have-been-working-on-june-2022.html)
+  - [번역본](https://velog.io/@superlipbalm/React-Labs-What-Weve-Been-Working-On-June-2022)
+- [카카오 페이 - React 18: 리액트 서버 컴포넌트 준비하기](https://tech.kakaopay.com/post/react-server-components/)
+- [카카오 페이 - 무조건 스켈레톤 화면을 보여주는게 사용자 경험에 도움이 될까요?](https://tech.kakaopay.com/post/skeleton-ui-idea/)
+- [카카오 엔터테인먼트 - 합성 컴포넌트로 재사용성 극대화하기](https://fe-developers.kakaoent.com/2022/220731-composition-component/)
+- [토스 - 조금만 신경써서 초기 렌더링 빠르게 하기(feat. JAM Stack)](https://toss.tech/article/faster-initial-rendering)
+- [카카오 엔터테인먼트 - 합성 컴포넌트로 재사용성 극대화하기](https://fe-developers.kakaoent.com/2022/220731-composition-component/)
+- [카카오 엔터테인먼트 - MSW를 활용하는 Front-End 통합테스트](https://fe-developers.kakaoent.com/2022/220825-msw-integration-testing/)
+- [When to useMemo and useCallback](https://kentcdodds.com/blog/usememo-and-usecallback)
+- [네이버 - 모던 프론트엔드 프로젝트 구성 기법 - 모노레포 개념 편](https://d2.naver.com/helloworld/0923884)
+- [네이버 - 모던 프론트엔드 프로젝트 구성 기법 - 모노레포 도구 편](https://d2.naver.com/helloworld/7553804)
+- [라인 - 개발자를 위한 친절한 UI 컴포넌트 라이브러리 만들기](https://engineering.linecorp.com/ko/blog/ui-component-library-for-developers-with-typescript-storybook/)
+- [라인 - Turborepo로 모노레포 개발 경험 향상하기](https://engineering.linecorp.com/ko/blog/monorepo-with-turborepo)
+- [우아한 형제들 - Yarn berry workspace를 활용한 프론트엔드 모노레포 구축기](https://techblog.woowahan.com/7976/)
+- [카카오 엔터테인먼트 - React 이벤트와 브라우저 이벤트](https://fe-developers.kakaoent.com/2022/220908-react-event-and-browser-event/)
+- [[번역] 우리가 Next.js로 리액트 로딩 시간을 70% 개선한 방법](https://velog.io/@cookie004/improved-react-loading-times-with-nextjs?utm_source=substack&utm_medium=email)
+- [(번역) 우리가 CSS-in-JS와 헤어지는 이유](https://junghan92.medium.com/%EB%B2%88%EC%97%AD-%EC%9A%B0%EB%A6%AC%EA%B0%80-css-in-js%EC%99%80-%ED%97%A4%EC%96%B4%EC%A7%80%EB%8A%94-%EC%9D%B4%EC%9C%A0-a2e726d6ace6)
+- [(번역) Next.js 작동 방식](https://velog.io/@surim014/how-next.js-works?utm_source=substack&utm_medium=email)
+- [카카오 엔터테인먼트 - React의 Error Boundary를 이용하여 효과적으로 에러 처리하기](https://fe-developers.kakaoent.com/2022/221110-error-boundary/)
+- [Index as a key is an anti-pattern (키로서의 인덱스는 안티 패턴입니다.)](https://robinpokorny.medium.com/index-as-a-key-is-an-anti-pattern-e0349aece318)
+- [ReactJS: Props vs. State](https://lucybain.com/blog/2016/react-state-vs-pros/)
+- [Use a Render Prop!](https://medium.com/@mjackson/use-a-render-prop-50de598f11ce)
+- [(번역) ‘Create React App 권장을 Vite로 대체’ PR 대한 Dan Abramov의 답변](https://junghan92.medium.com/%EB%B2%88%EC%97%AD-create-react-app-%EA%B6%8C%EC%9E%A5%EC%9D%84-vite%EB%A1%9C-%EB%8C%80%EC%B2%B4-pr-%EB%8C%80%ED%95%9C-dan-abramov%EC%9D%98-%EB%8B%B5%EB%B3%80-3050b5678ac8)
+- [(번역) Concurrent 리액트에 대해 알아야 할 모든 것(그리고 Suspense에 대해서 약간)](https://velog.io/@superlipbalm/everything-you-need-to-know-about-concurrent-react)
+- [(번역) Next.js의 app 디렉터리 아키텍처 이해하기](https://junghan92.medium.com/%EB%B2%88%EC%97%AD-next-js%EC%9D%98-app-%EB%94%94%EB%A0%89%ED%84%B0%EB%A6%AC-%EC%95%84%ED%82%A4%ED%85%8D%EC%B2%98-%EC%9D%B4%ED%95%B4%ED%95%98%EA%B8%B0-28672980d765)
+
+### CI/CD
+- [뱅크셀러드 - 뱅크샐러드 Web chapter에서 GitHub Action 기반의 CI 속도를 개선한 방법](https://blog.banksalad.com/tech/github-action-npm-cache)
+
+### 함수형
+- [(번역) 어쨌든 함수형 프로그래밍의 장점은 뭔가요?](https://junghan92.medium.com/%EB%B2%88%EC%97%AD-%EC%96%B4%EC%A8%8C%EB%93%A0-%ED%95%A8%EC%88%98%ED%98%95-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%EC%9D%98-%EC%9E%A5%EC%A0%90%EC%9D%80-%EB%AD%94%EA%B0%80%EC%9A%94-a57f37872e4)
+
+### JavaScript & TypeScript
+- [카카오 엔터테인먼트 - 자바스크립트의 새로운 기능들](https://fe-developers.kakaoent.com/2022/220728-es2022/?fbclid=IwAR1TlzBTBw1zNnp1uvQGyF8EuDphYEcoGeuRM4wXBcsghUt3D5lAIXpcPGo)
+- [토스 - CommonJS와 ESM에 모두 대응하는 라이브러리 개발하기: exports field](https://toss.tech/article/commonjs-esm-exports-field)
+- [(번역) 자바스크립트 웹 프레임워크의 새로운 흐름](https://ykss.netlify.app/translation/the_new_wave_of_javascript_web_frameworks/?utm_source=substack&utm_medium=email)
+- [우아한 형제들 - 우리 팀의 우아한 타입스크립트 컨벤션 정하기 여정](https://techblog.woowahan.com/9804)
+- [카카오 엔터테인먼트 - Typescript - Union Type, Intersection Type, Etc.](https://fe-developers.kakaoent.com/2022/221124-typescript-tip/)
+- [(번역)더 좋은 타입스크립트 프로그래머로 만드는 11가지 팁](https://velog.io/@lky5697/11-tips-that-help-you-become-a-better-typescript-programmer)
+- [똑똑하게 브라우저 Polyfill 관리하기](https://toss.tech/article/smart-polyfills)
+- [[번역] 자바스크립트 가비지 컬렉터 실험](https://velog.io/@surim014/Experiments-with-the-JavaScript-Garbage-Collector)
+- [[번역] 코드 품질을 높여주는 고급 자바스크립트 함수](https://velog.io/@typo/advanced-javascript-functions-to-improve-code-quality)
+- [[번역] ES2023에서 도입된 자바스크립트의 새로운 배열 복사 메서드](https://velog.io/@eunbinn/es2023-new-array-copying-methods-javascript)
+
+### CSS
+- [(번역) 더 나은 CSS 트랜지션 및 애니매이션을 위한 10가지 팁](https://ykss.netlify.app/translation/ten_tips_for_better_css_transitions_and_animations/)
+
+### 테스트
+- [[번역] 프런트엔드 단위 테스트 모범 사례](https://velog.io/@surim014/frontend-unit-testing-best-practices?utm_source=substack&utm_medium=email)
+- [(번역) 내가 작성한 Jest 테스트는 왜 이렇게 느릴까?](https://velog.io/@sehyunny/why-is-my-jest-test-suit-so-slow)
+
+### 유튜브
+- [토스 - JavaScript Bundle Diet](https://www.youtube.com/watch?v=EP7g5R-7zwM&ab_channel=%ED%86%A0%EC%8A%A4)
+
+### 개발 문화
+- [우아한 형제들 - 공통시스템개발팀 코드 리뷰 문화 개선 이야기](https://techblog.woowahan.com/7152/)
+- [라인 - 효과적인 코드 리뷰를 위해서](https://engineering.linecorp.com/ko/blog/effective-codereview)
+- [뱅크샐러드 - 코드 리뷰 in 뱅크샐러드 개발 문화](https://blog.banksalad.com/tech/banksalad-code-review-culture/)
+
+### 기타
+- [카카오 엔터테인먼트 - SEO 개선 초심자 가이드](https://fe-developers.kakaoent.com/2022/221208-basic-seo-guide/)
+- [(번역) 2023년 웹 개발 트렌드 10가지](https://ykss.netlify.app/translation/10_web_development_trends_in_2023)
+
+### 컨퍼런스
+- [인프콘 2022](https://www.inflearn.com/course/infcon2022)
+  - [나도 내 코드의 문제를 찾고 싶다고요?! - 테스트할 때 기억할 7가지](https://infcon.day/speaker/%ed%95%9c%ec%a3%bc%ec%8a%b9-%ed%85%8c%ec%8a%a4%ed%8a%b8-%ea%b8%b0%ec%96%b5%ed%95%a0-7%ea%b0%80%ec%a7%80/)
+  - [Rust 크로스 플랫폼 프로그래밍](https://infcon.day/speaker/%ec%98%a5%ec%b0%ac%ed%98%b8-rust-%ed%81%ac%eb%a1%9c%ec%8a%a4-%ed%94%8c%eb%9e%ab%ed%8f%bc)
+  - [서버비 0원, 클라우드 큐 도입으로 해냈습니다!](https://infcon.day/speaker/%ec%a1%b0%ed%98%84%ec%98%81-%ed%81%b4%eb%9d%bc%ec%9a%b0%eb%93%9c-%ed%81%90-%ec%84%9c%eb%b2%84/)
+  - [개발자의 셀프 브랜딩](https://infcon.day/speaker/%ea%b9%80%eb%af%bc%ec%a4%80-%ea%b0%9c%eb%b0%9c%ec%9e%90-%ec%85%80%ed%94%84%eb%b8%8c%eb%9e%9c%eb%94%a9/)
+  - [언어와 함께 성장하기 - Node.js와 10년, v0.8부터 v16까지](https://infcon.day/speaker/%ea%b0%95%eb%8f%99%ed%95%9c-nodejs/)
+  - [성공하는 스터디를 만드는 10가지 방법 - 인출 위주의 스터디 여정기](https://infcon.day/speaker/%ed%95%9c%ec%9c%a4%ec%84%9d-%ec%84%b1%ea%b3%b5%ed%95%98%eb%8a%94-%ec%8a%a4%ed%84%b0%eb%94%94-%eb%b0%a9%eb%b2%95/)
+  - [FE 개발자도 할 수 있다! RESTful API 개발 (with Firebase, GCP)](https://infcon.day/speaker/%ec%a1%b0%ec%9d%80-%ed%94%84%eb%9f%b0%ed%8a%b8%ec%97%94%eb%93%9c-restful-api/)
+  - [운영 중인 Vue.js 웹 서비스를 타입스크립트로 다시 쓰기](https://infcon.day/speaker/%ec%9e%a5%ea%b8%b0%ed%9a%a8-vuejs-typescript/)
+  - [우리는 오늘도 성장합니다 - 인프랩 프런트엔드 업무 프로세스 변천사](https://infcon.day/speaker/%ec%9e%a5%ec%9a%b0%ed%98%84-%ec%9d%b8%ed%94%84%eb%9e%a9-%ec%84%b1%ec%9e%a5/)
+  - [Vanilla JS와 함께 지속가능한 프런트엔드 코드 만들기 - 인프런 수강 바구니 개선기](https://infcon.day/speaker/%ec%9d%b4%eb%ac%b8%ea%b8%b0-vanillajs/)
+- [FEConf 2022](https://2022.feconf.kr/)
+  - [Track A](https://www.youtube.com/watch?v=jZNk-Ncez6E&ab_channel=FEConfKorea)
+  - [Track B](https://www.youtube.com/watch?v=ajtpcFkXqqg&ab_channel=FEConfKorea)
+- [if(kakao)dev 2022 front-end session](https://if.kakao.com/session?f.2gB2OPT7YO.GgWcMRm0cNSS=fe)
+- [Naver Deview 2023](https://deview.kr/2023/sessions)
+  - [하나의 코드로 React, Vue, Svelte 등 모든 프레임워크를 지원할 수 있는 CFCs Reactive](https://deview.kr/2023/sessions/548)
+  - [눈으로 보며 듣는 음성 기록, 클로바노트 서비스의 웹 기술 톺아보기](https://deview.kr/2023/sessions/537)
+  - [UI 빌더를 지탱하는 레고 블록 같은 아키텍처 만들기](https://deview.kr/2023/sessions/543)
+  - [중요한 건 꺾이지 않는 마음: 스마트에디터의 도전](https://deview.kr/2023/sessions/573)
+  - [GraphQL 잘 쓰고 계신가요? (Production-ready GraphQL)](https://deview.kr/2023/sessions/545)
+  - [SSR환경에서의 Micro-Frontend 구현과 퍼포먼스 향상을 위한 캐시전략](https://deview.kr/2023/sessions/538)
+  - [자바스크립트 화이트박스 암호와 크롬 라인 메신저의 보안 강화](https://deview.kr/2023/sessions/534)
+  - [웨일 브라우저 오픈 소스 생존기](https://deview.kr/2023/sessions/576)
+  - [그 여자 APP, 그 남자 SDK: Kotlin Multiplatform 적용기](https://deview.kr/2023/sessions/564)
+- [Toss Slash 2023](https://toss.im/slash-23)
+  - [Server-driven UI로 토스의 마지막 어드민 만들기](https://toss.im/slash-23/session-detail/A1-2)
+  - [퍼널: 쏟아지는 페이지 한 방에 관리하기](https://toss.im/slash-23/session-detail/A1-3)
+  - [달리는 토스 앱에 React Native 엔진 더하기](https://toss.im/slash-23/session-detail/A1-4)
+- [인프콘 2023](https://inflearn.com/conf/infcon-2023/session)
+  - [당신의 웹페이지는 몇 점 인가요?: 라이트 하우스를 통한 프런트 성능개선](https://inflearn.com/conf/infcon-2023/session-detail?id=752)
+  - [Turborepo, Next.js, TypeScript를 이용한 프론트엔드 모노레포 적용기](https://inflearn.com/conf/infcon-2023/session-detail?id=746)
+  - [안타깝게도 오늘의 TDD는 실패한 것 같군요. 내일은 가능할지도...?](https://inflearn.com/conf/infcon-2023/session-detail?id=781)
+  - [Hello, Interactive Developer: WebGL로 아트코딩 하기](https://inflearn.com/conf/infcon-2023/session-detail?id=768)
+  - [주니어 프론트엔드 엔지니어의 성과 및 역량 향상을 위한 실전 가이드](https://inflearn.com/conf/infcon-2023/session-detail?id=743)
+  - [웹뷰를 이용해 웹 서비스를 앱으로 빠르게 구현하기](https://inflearn.com/conf/infcon-2023/session-detail?id=755)
+  - [SSR의 기쁨과 슬픔: 렌더링의 변화의 흐름을 통해 알아보는 SSR과 Streaming SSR](https://inflearn.com/conf/infcon-2023/session-detail?id=748)
+  - [왜 구글 시니어 개발자는 코딩을 안할까?](https://inflearn.com/conf/infcon-2023/session-detail?id=760)
+- [FEConf 2023](https://2023.feconf.kr/)
