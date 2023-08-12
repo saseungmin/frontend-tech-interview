@@ -1,9 +1,9 @@
 # 👉 React
 
-## 📚 [React Architecture 및 패턴과 관련된 아티클](https://github.com/saseungmin/frontend-tech-interview/tree/main/react/React%20Clean%20Architecture)
+## 📚 [React Architecture 및 패턴과 관련된 아티클](/docs/react/react-clean-architecture)
 
-## 📚 [SWR 또는 React Query와 같은 라이브러리가 나타나게 된 배경 및 원인](https://github.com/saseungmin/frontend-tech-interview/tree/main/react/redux%20vs%20react-query)
+## 📚 [SWR 또는 React Query와 같은 라이브러리가 나타나게 된 배경 및 원인](/docs/react/redux-vs-react-query)
 
-## 📚 [재조정(Reconciliation)](https://github.com/saseungmin/frontend-tech-interview/blob/main/react/reconciliation.md)
+## 📚 [재조정(Reconciliation)](/docs/react/reconciliation)
 
-## 📚 [When to `useMemo` and `useCallback`](https://github.com/saseungmin/frontend-tech-interview/blob/main/react/when-to-useMemo-and-useCallback.md)
+## 📚 [When to `useMemo` and `useCallback`](/docs/react/when-to-useMemo-and-useCallback)
