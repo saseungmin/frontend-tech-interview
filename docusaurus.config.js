@@ -69,7 +69,7 @@ const config = {
             items: [
               {
                 label: 'Questions',
-                to: '/docs/intro',
+                to: '/docs/article',
               },
             ],
           },
