@@ -1,6 +1,6 @@
 # 📚 CORS(Cross Origin Resource Sharing)
 
-## 🤔 [CORS는 왜 이렇게 우리를 힘들게 하는걸까?](https://github.com/saseungmin/frontend-tech-interview/blob/main/web/cors/cors%EB%8A%94_%EC%99%9C_%EC%9D%B4%EB%A0%87%EA%B2%8C_%EC%9A%B0%EB%A6%AC%EB%A5%BC_%ED%9E%98%EB%93%A4%EA%B2%8C_%ED%95%98%EB%8A%94%EA%B1%B8%EA%B9%8C.md)
+## 🤔 CORS는 왜 이렇게 우리를 힘들게 하는걸까?
 - [출처](https://evan-moon.github.io/2020/05/21/about-cors/)
 
 ### 🎈 참고

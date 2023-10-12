@@ -1,4 +1,6 @@
-# 👉 [브라우저는 웹페이지를 어떻게 그리나요? - Critical Rendering Path](https://m.post.naver.com/viewer/postView.nhn?volumeNo=8431285&memberNo=34176766)
+# 👉 브라우저는 웹페이지를 어떻게 그리나요? - Critical Rendering Path
+
+> https://m.post.naver.com/viewer/postView.nhn?volumeNo=8431285&memberNo=34176766
 
 브라우저가 하나의 화면을 그려내는 이 과정을 **중요 렌더링 경로(Critical Rendering Path)** 라고 부른다.   
 
