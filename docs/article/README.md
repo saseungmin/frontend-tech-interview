@@ -86,6 +86,7 @@
 - [우아한 형제들 - 공통시스템개발팀 코드 리뷰 문화 개선 이야기](https://techblog.woowahan.com/7152/)
 - [라인 - 효과적인 코드 리뷰를 위해서](https://engineering.linecorp.com/ko/blog/effective-codereview)
 - [뱅크샐러드 - 코드 리뷰 in 뱅크샐러드 개발 문화](https://blog.banksalad.com/tech/banksalad-code-review-culture/)
+- [Feature Toggles (aka Feature Flags) - martinfowler](https://martinfowler.com/articles/feature-toggles.html)
 
 ### 기타
 - [카카오 엔터테인먼트 - SEO 개선 초심자 가이드](https://fe-developers.kakaoent.com/2022/221208-basic-seo-guide/)
