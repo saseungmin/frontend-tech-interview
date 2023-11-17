@@ -132,3 +132,4 @@
   - [SSR의 기쁨과 슬픔: 렌더링의 변화의 흐름을 통해 알아보는 SSR과 Streaming SSR](https://inflearn.com/conf/infcon-2023/session-detail?id=748)
   - [왜 구글 시니어 개발자는 코딩을 안할까?](https://inflearn.com/conf/infcon-2023/session-detail?id=760)
 - [FEConf 2023](https://2023.feconf.kr/)
+- [WOOWACON 2023](https://woowacon.com/presentations)
