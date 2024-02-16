@@ -1,8 +1,9 @@
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
-import HomepageFeatures from '@site/src/components/HomepageFeatures';
 import Layout from '@theme/Layout';
 import clsx from 'clsx';
+
+import HomepageFeatures from '../components/HomepageFeatures';
 
 import styles from './index.module.css';
 

@@ -9,6 +9,7 @@
 - [Daily DevBlog 이메일 구독](http://daily-devblog.com/)
 - [Naver FE News 이메일 구독](https://fenews.substack.com/embed)
 - [Korea FE Article 이메일 구독](https://kofearticle.substack.com/)
+- [JavaScript Weekly 이메일 구독](https://javascriptweekly.com/)
 
 ### 💻 국내 기업 기술 블로그
 - [네이버 D2](https://d2.naver.com/home)

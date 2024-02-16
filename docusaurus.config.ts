@@ -70,20 +70,7 @@ const config: Config = {
           },
           {
             title: 'Community',
-            items: [
-              {
-                label: 'Stack Overflow',
-                href: '#',
-              },
-              {
-                label: 'Discord',
-                href: '#',
-              },
-              {
-                label: 'Twitter',
-                href: '#',
-              },
-            ],
+            items: [],
           },
           {
             title: 'More',
