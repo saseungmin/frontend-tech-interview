@@ -12,6 +12,8 @@
 - [디스콰이엇](https://disquiet.io/)
 - [요즘 IT](https://yozm.wishket.com/)
 - [커리어리](https://careerly.co.kr/home)
+- [daily.dev](https://app.daily.dev/my-feed)
+- [web.dev](https://web.dev/?hl=ko)
 - [Velog](https://velog.io/)
 
 ### 💻 국내 기업 기술 블로그
@@ -57,6 +59,8 @@
 - [(번역) ‘Create React App 권장을 Vite로 대체’ PR 대한 Dan Abramov의 답변](https://junghan92.medium.com/%EB%B2%88%EC%97%AD-create-react-app-%EA%B6%8C%EC%9E%A5%EC%9D%84-vite%EB%A1%9C-%EB%8C%80%EC%B2%B4-pr-%EB%8C%80%ED%95%9C-dan-abramov%EC%9D%98-%EB%8B%B5%EB%B3%80-3050b5678ac8)
 - [(번역) Concurrent 리액트에 대해 알아야 할 모든 것(그리고 Suspense에 대해서 약간)](https://velog.io/@superlipbalm/everything-you-need-to-know-about-concurrent-react)
 - [(번역) Next.js의 app 디렉터리 아키텍처 이해하기](https://junghan92.medium.com/%EB%B2%88%EC%97%AD-next-js%EC%9D%98-app-%EB%94%94%EB%A0%89%ED%84%B0%EB%A6%AC-%EC%95%84%ED%82%A4%ED%85%8D%EC%B2%98-%EC%9D%B4%ED%95%B4%ED%95%98%EA%B8%B0-28672980d765)
+- [(번역) 기능 분할 설계 - 최고의 프런트엔드 아키텍처](https://emewjin.github.io/feature-sliced-design)
+- [FSD(feature-sliced.design)](https://feature-sliced.design/docs)
 
 ### CI/CD
 - [뱅크셀러드 - 뱅크샐러드 Web chapter에서 GitHub Action 기반의 CI 속도를 개선한 방법](https://blog.banksalad.com/tech/github-action-npm-cache)
