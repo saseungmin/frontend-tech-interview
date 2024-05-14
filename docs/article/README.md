@@ -143,3 +143,6 @@
 - [WOOWACON 2023](https://woowacon.com/presentations)
 - [Next.js Conf 2023 with next.js 14](https://www.youtube.com/watch?v=gfU1iZnjRZM&list=PLBnKlKpPeagl57K9bCw_IXShWQXePnXjY&ab_channel=Vercel)
 - [React.js Conf 2024](https://conf.react.dev/)
+- [Vercel Ship 2024](https://vercel.com/ship)
+- [인프콘 2024](https://www.inflearn.com/infcon-2024/teaser)
+- [FEConf 2024](https://2024.feconf.kr/)
