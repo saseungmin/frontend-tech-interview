@@ -2,7 +2,7 @@
 
 > 프론트엔드에서 흥미롭거나 읽을만한 아티클 및 공식문서 링크를 모아두는 장소
 
-### IT 인사이트
+### IT & FE 인사이트
 - [스타트업 스토리 플랫폼: 플래텀](https://platum.kr/)
 - [GeekNews - 개발/기술/스타트업 뉴스 서비스](https://news.hada.io/)
 - [Daily DevBlog 이메일 구독](http://daily-devblog.com/)
@@ -67,6 +67,7 @@
 
 ### 함수형
 - [(번역) 어쨌든 함수형 프로그래밍의 장점은 뭔가요?](https://junghan92.medium.com/%EB%B2%88%EC%97%AD-%EC%96%B4%EC%A8%8C%EB%93%A0-%ED%95%A8%EC%88%98%ED%98%95-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%EC%9D%98-%EC%9E%A5%EC%A0%90%EC%9D%80-%EB%AD%94%EA%B0%80%EC%9A%94-a57f37872e4)
+- [모닥불 | EP.2 함수형 프로그래밍, 프론트엔드 개발에 진짜 도움 될까?](https://toss.tech/article/firesidechat_frontend_2)
 
 ### JavaScript & TypeScript
 - [카카오 엔터테인먼트 - 자바스크립트의 새로운 기능들](https://fe-developers.kakaoent.com/2022/220728-es2022/?fbclid=IwAR1TlzBTBw1zNnp1uvQGyF8EuDphYEcoGeuRM4wXBcsghUt3D5lAIXpcPGo)
@@ -86,8 +87,9 @@
 ### 테스트
 - [[번역] 프런트엔드 단위 테스트 모범 사례](https://velog.io/@surim014/frontend-unit-testing-best-practices?utm_source=substack&utm_medium=email)
 - [(번역) 내가 작성한 Jest 테스트는 왜 이렇게 느릴까?](https://velog.io/@sehyunny/why-is-my-jest-test-suit-so-slow)
+- [모닥불 | EP.3 프론트엔드 개발에서 테스트 자동화, 꼭 해야 할까?](https://toss.tech/article/firesidechat_frontend_3)
 
-### 유튜브
+### 최적화
 - [토스 - JavaScript Bundle Diet](https://www.youtube.com/watch?v=EP7g5R-7zwM&ab_channel=%ED%86%A0%EC%8A%A4)
 
 ### 개발 문화
@@ -95,6 +97,9 @@
 - [라인 - 효과적인 코드 리뷰를 위해서](https://engineering.linecorp.com/ko/blog/effective-codereview)
 - [뱅크샐러드 - 코드 리뷰 in 뱅크샐러드 개발 문화](https://blog.banksalad.com/tech/banksalad-code-review-culture/)
 - [Feature Toggles (aka Feature Flags) - martinfowler](https://martinfowler.com/articles/feature-toggles.html)
+
+### 클린코드
+- [모닥불 | EP.1 토스에서 말하는 “가독성 좋은 코드” 란 무엇일까?](https://toss.tech/article/firesidechat_frontend_1)
 
 ### 기타
 - [카카오 엔터테인먼트 - SEO 개선 초심자 가이드](https://fe-developers.kakaoent.com/2022/221208-basic-seo-guide/)
