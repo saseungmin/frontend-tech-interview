@@ -152,3 +152,4 @@
 - [인프콘 2024](https://www.inflearn.com/infcon-2024/teaser)
 - [FEConf 2024](https://2024.feconf.kr/)
 - [Toss slash24](https://toss.im/slash-24)
+- [daangn tech meetup 2024](https://tech-meetup.daangn.com/)
