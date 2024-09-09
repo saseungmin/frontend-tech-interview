@@ -233,6 +233,10 @@ export const config = {
 2. Edge Function의 최대 크기는 [함수에 번들로 제공되는 모든 코드를 포함하여](https://vercel.com/docs/concepts/functions/edge-functions/limitations#code-size-limit) 4MB 입니다.
 3. **대부분의 기본 Node.js API는 지원되지 않습니다.** [여기에서 지원되는 Node.js API 목록을 참조하세요.](https://vercel.com/docs/concepts/functions/edge-functions/edge-functions-api)
 4. [서버리스 기능과의 비교](https://vercel.com/docs/concepts/limits/overview#functions-comparison)
+5. edge function 사용시 Next.js에서 해당 페이지의 정적 생성(Static Generation)이 비활성화됩니다. Edge 런타임은 각 요청마다 새로운 환경에서 코드를 실행합니다. 이는 정적으로 생성된 콘텐츠와 맞지 않습니다. 증분 정적 재생성(ISR)을 사용할 때, Edge 런타임과 ISR을 함께 사용할 때 다음과 같은 상황이 발생할 수 있습니다.
+   1. 오래된(stale) 페이지 재생성: 페이지가 오래되어 재생성이 필요한 경우, HTML과 JSON 버전을 동시에 생성합니다.
+   2. On-demand ISR with `fallback: 'blocking'`: 페이지는 요청 시 동기적으로 HTML을 렌더링합니다. 그 후 백그라운드에서 HTML과 JSON 버전 모두에 대한 재검증(revalidation)이 이루어집니다.
+   3. Edge 런타임을 사용할 때 정적 생성이 비활성화되지만, ISR과 같은 기능을 통해 여전히 효율적인 콘텐츠 갱신과 제공이 가능합니다. 다만, 이 과정에서 여러 로그가 발생할 수 있음을 알려주는 것입니다.
 
 자세한 내용은 [Edge Functions 제한 페이지](https://vercel.com/docs/concepts/functions/edge-functions/limitations)를 참조하세요.
 
