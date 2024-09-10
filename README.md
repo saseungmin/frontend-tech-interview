@@ -79,6 +79,7 @@
 - CORS는 왜 이렇게 우리를 힘들게 하는걸까?
 - 브라우저의 동작 원리
 - Core Web Vitals
+- Lighthouse
 
 ## 🍭 [Test와 TDD에 대한 정리](https://saseungmin.github.io/frontend-tech-interview/docs/TestAndTDD)
 - 함께 자라기

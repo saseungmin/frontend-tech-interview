@@ -55,7 +55,7 @@ CSRF(Cross Site Request Forgery) 인터넷 사용자가 자신의 의지와는 �
 ### 🎈 프레임워크와 라이브러리의 차이점
 프레임워크는 구조나 뼈대같은 것을 의미하는데, 라이브러리는 가져다가 사용할 수 있는 도구와 관련이 있습니다. 이 둘의 차이점은 제어의 주체가 어디에/누구에 있느냐가 중요한데, 프레임워크는 전체적인 흐름을 스스로 쥐고 있으며 사용자는 그 정해진 틀에 맞춰서 (안에 들어가서) 코드를 짜 넣는 것입니다. 라이브러리는 제어의 주체는 사용자가 쥐고 있으며 그 흐름을 직접 만드는 것입니다. 예를 들어, 라이브러리는 톱, 삽, 망치 같은 연장을 비유할 수 있는데, 톱, 삽, 망치같은 것들은 자신이 원하는 도구를 마음대로 선택해서 결과물을 만들 수 있는 것이고, 프레임워크는 배, 차, 비행기같은 탈것에 비유할 수 있겠는데, 배, 차 비행기는 각자의 목적에 맞게 (배는 바다, 비행기는 하늘, 차는 땅)사용해야 하며, 차를 사용할 경우 기어, 패달등 사용법을 알면 내가 만들 필요 없이 목적에 맞게 사용할 수 있습니다.
 
-### [Core Web Vitals](https://web.dev/articles/vitals?hl=ko)
+### [🎈 Core Web Vitals](https://web.dev/articles/vitals?hl=ko)
 - [최대 콘텐츠 페인트 (LCP)](https://web.dev/articles/lcp?hl=ko): 로드 성능을 측정합니다. 우수한 사용자 환경을 제공하려면 페이지가 처음 로드되기 2.5초 이내에 LCP가 발생해야 합니다.
   - 웹 페이지가 완전히 로드되는 데 걸리는 시간을 측정하는 것이 아니라, 가장 중요한 부분이 로드되는 시점에만 집중함. 즉, 뷰포트 내에서 가장 **큰 페이지 요소(큰 텍스트 블록, 이미지 또는 비디오)를 표시하는 데 걸리는 시간**을 측정
 - [다음 페인트에 대한 상호작용 (INP)](https://web.dev/articles/inp?hl=ko): 상호작용을 측정합니다. 우수한 사용자 환경을 제공하려면 페이지의 INP가 200밀리초 이하여야 합니다.
@@ -75,3 +75,47 @@ CSRF(Cross Site Request Forgery) 인터넷 사용자가 자신의 의지와는 �
         - CSS transform 속성을 사용하면 레이아웃 변경을 트리거하지 않고도 요소에 애니메이션을 적용할 수 있습니다.
           - `height` 및 `width` 속성을 변경하는 대신 `transform: scale()`를 사용합니다.
       - 웹폰트 로딩 최적화
+
+### [🎈 lighthouse](https://developer.chrome.com/docs/lighthouse/overview?hl=ko)
+웹페이지 품질을 개선하기 위한 오픈소스 자동화 도구. 모든 공개 웹페이지 또는 인증이 필요한 웹페이지에 대해 실행할 수 있음. 성능, 접근성, 프로그레시브 웹 앱, 검색엔진 최적화 등에 대한 감사가 제공.   
+
+- [콘텐츠가 포함된 첫 페인트(First Contentful Paint)](https://developer.chrome.com/docs/lighthouse/performance/first-contentful-paint?hl=ko)
+  - FCP는 사용자가 페이지로 이동한 후 브라우저에서 첫 번째 DOM 콘텐츠를 렌더링하는 데 걸리는 시간을 측정
+  - FCP에서 특히 중요한 한 가지 문제는 글꼴 로드 시간이다. 글꼴 로드 속도를 높이는 방법은 웹 글꼴 로드 중에 텍스트가 계속 표시되도록 하면된다.
+    - [`font-display`](https://developer.mozilla.org/ko/docs/Web/CSS/@font-face/font-display) 를 사용해서 font face가 로드되지 않은 경우 font face를 사용하려는 요소는 보이지 않는 대체 폰트를 렌더링 하도록 한다. 이 기간 동안 font face가 성공적으로 로드되면 요청된 폰트로 다시 렌더링 된다.
+  - [기타 FCP 개선 방법](https://web.dev/articles/fcp?hl=ko#improve-fcp)
+    - 렌더링 차단 리소스 제거
+    - CSS 축소
+    - 사용하지 않는 CSS 삭제
+    - 사용하지 않는 JavaScript 삭제하기
+    - 필수 출처에 사전 연결
+    - 서버 응답 시간 (TTFB) 단축
+    - 여러 번의 페이지 리디렉션 피하기
+    - 주요 요청 미리 로드
+    - 방대한 네트워크 페이로드 방지
+    - 효율적인 캐시 정책으로 정적 애셋 제공
+    - 과도한 DOM 크기 피하기
+    - 중요한 요청 깊이 최소화
+    - 요청 수는 작게 유지하고 전송 크기는 작게
+- [속도 섹인(speed index)](https://developer.chrome.com/docs/lighthouse/performance/speed-index?hl=ko)
+  - 속도 색인은 페이지 로드 중 콘텐츠가 시각적으로 표시되는 속도를 측정
+  - Lighthouse는 먼저 브라우저에서 페이지 로드 동영상을 캡처하고 프레임 간의 시각적 진행 상황을 계산
+  - 개선 방법
+    - [기본 스레드 작업 최소화](https://developer.chrome.com/docs/lighthouse/performance/mainthread-work-breakdown?hl=ko)
+    - [자바스크립트 실행 시간 단축](https://developer.chrome.com/docs/lighthouse/performance/bootup-time?hl=ko)
+    - [웹폰트가 로드되는 동안 텍스트가 계속 표시되는지 확인](https://developer.chrome.com/docs/lighthouse/performance/font-display?hl=ko)
+- [총 차단 시간(Total Blocking Time)](https://developer.chrome.com/docs/lighthouse/performance/lighthouse-total-blocking-time?hl=ko)
+  - TBT는 페이지가 마우스 클릭, 화면 탭 또는 키보드 누름과 같은 사용자 입력에 응답하지 못하도록 차단된 총 시간을 측정
+  - 합계는 콘텐츠가 포함된 첫 페인트(FCP)와 상호작용(TTI) 시간 사이에 모든 장기 작업의 차단 부분을 더하여 계산
+  - TBT 점수를 개선하는 방법
+    - 불필요한 자바스크립트 로드, 파싱 또는 실행. 성능 패널에서 코드를 분석하는 동안 기본 스레드가 페이지를 로드하는 데 실제로 필요하지 않은 작업을 실행할때 발생. 코드 분할을 통해 JavaScript 페이로드를 줄이거나 사용하지 않는 코드를 삭제하거나 서드 파티 JavaScript를 효율적으로 로드하면 TBT 점수가 개선된다.
+    - 비효율적인 JavaScript문을 제거
+- [콘텐츠가 포함된 최대 페인트(Largest Contentful Paint)](https://developer.chrome.com/docs/lighthouse/performance/lighthouse-largest-contentful-paint?hl=ko)
+  - LCP는 표시 영역에서 가장 큰 콘텐츠 요소가 화면에 렌더링될 때 측정
+  - LCP 시간의 대부분은 HTML 문서 및 LCP 소스를 로드하는 데 사용되어야 함.
+  - [LCP 점수를 개선하는 방법](https://web.dev/articles/optimize-lcp?hl=ko#how-to-optimize-each-part)
+    - LCP 시간의 대부분은 HTML 문서 및 LCP 소스를 로드하는 데 사용되어야함. LCP는 총 4단계로 나눠짐.
+      - 첫 바이트까지의 시간 (TTFB)
+      - 리소스 로드 지연
+      - 리소스 로드 시간
+      - 요소 렌더링 지연
