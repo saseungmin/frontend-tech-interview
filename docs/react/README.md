@@ -7,3 +7,7 @@
 ## 📚 [재조정(Reconciliation)](/docs/react/reconciliation)
 
 ## 📚 [When to `useMemo` and `useCallback`](/docs/react/when-to-useMemo-and-useCallback)
+
+## 📚 [react 18 변경점](/docs/react/react-18)
+
+## 📚 [react 19](/docs/react/react-19)
