@@ -231,3 +231,42 @@ let flavor: Flavor = 'chocolate'; // 정상
 ```
 
 리터럴 타입의 유니온은 열거형만큼 안전하며 자바스크립트와 호환되는 장점이 있습니다. 그리고 편집기에서 열거형처럼 자동완성 기능을 사용할 수 있습니다.
+
+## 🥕 [`any`와 `unknown`의 차이](https://xionwcfm.tistory.com/394)
+`unknown` 타입은 `any` 타입 외의 어떤 타입에도 할당할 수 없다는 것입니다. 반면 `any`는 `never`를 제외한 모든것에 할당 가능합니다.
+
+```ts
+// error: boolean 타입에는 unknown 타입을 할당할 수 없음.
+let unknownType: unknown;
+let booleanType: boolean = unknownType;
+
+// 반대로 unknown 타입에 boolean 타입을 할당하는 건 가능.
+let boolType: boolean = true;
+let unknownType: unknown = boolType;
+```
+
+`unknown` 타입에는 어떤 것을 대입하는 것이 유효하지 않기 때문에 `any` 타입보다 더욱 안전합니다.   
+`unknown` 타입은 프로퍼티에 접근, 메소드 호출, 인스턴스 생성을 할 수 없습니다.   
+
+```ts
+// any는 string이라는 보장이 아니여도 호출 가능.
+let anyValue: any;
+anyValue.toUpperCase();
+
+// error: unknown은 불가능.
+let unknownValue: unknown;
+unknownValue.toUpperCase();
+```
+
+이를 해결하기 위해서는 `unknown` 타입을 `string`으로 좁혀주어야합니다.
+
+```ts
+const unknownArgFunction = (value: unknown) => {
+  if (typeof value === 'string') {
+    // string으로 타입을 좁혀준 뒤 메서드를 호출.
+    value.toUpperCase();
+  }
+}
+```
+
+타입스크립트를 사용하다보면 들어오게 될 인자의 타입을 예측할 수 없는 경우가 있는데, `any` 타입을 사용할때에는 휴먼에러를 발생하시 쉽지만, `unknown` 타입은 항상 타입을 먼저 확인 한 후에 무언가를 시도할 수 있기 때문에 `any` 타입보다 더욱 안전합니다.   
