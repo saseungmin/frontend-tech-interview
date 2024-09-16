@@ -80,7 +80,7 @@ Next.js에서는 SWC를 기반으로 개발한 컴파일러를 통해 기존 빌
 #### 트랜스파일러
 트랜스파일러는 위에서 설명한 컴파일러의 하위분류입니다. 언어를 변환해 주는 기능을 제공하는 소프트웨어인 것은 일반적인 컴파일러와 동일하지만, 트랜스파일러는 완전히 다른 두 언어 사이를 변환해 주는 것이 아니라 유사한 두 언어 사이에서 변환해주는 한정된 역할을 제공해 주는 소프트웨어라는 점이 다릅니다.   
 
-### 🎈 [프론트엔드 렌더링: SSG vs ISG vs SSR vs CSR - 언제 어떤 것을 사용해야 할까요?](https://tapajyoti-bose.medium.com/frontend-rendering-ssg-vs-isg-vs-ssr-vs-csr-when-to-use-which-1bf9f39ff07c)
+### 🎈 [프론트엔드 렌더링: SSG vs ISR vs SSR vs CSR - 언제 어떤 것을 사용해야 할까요?](https://tapajyoti-bose.medium.com/frontend-rendering-ssg-vs-isg-vs-ssr-vs-csr-when-to-use-which-1bf9f39ff07c)
 
 #### 정적 페이지 생성 (SSG, Static Site Generation)
 SSG는 raw 데이터와 템플릿 세트를 바탕으로 완전히 정적인 HTML 웹 사이트를 생성하는 방법입니다. 기본적으로 정적 사이트 생성은 각각의 HTML 페이지 코딩 작업을 자동화하고 해당 페이지를 미리 사용자에게 제공할 수 있도록 준비합니다. 간단히 말해서, SSG는 웹 사이트의 모든 페이지를 미리 렌더링하고 클라이언트 요청에 따라 페이지를 제공합니다.   
