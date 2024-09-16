@@ -35,6 +35,7 @@
 ## 🍭 [TypeScript](https://saseungmin.github.io/frontend-tech-interview/docs/typescript)
 - 타입과 인터페이스의 차이점
 - 열거형(enum) 사용을 지양해야하는 이유
+- `any`와 `unknown`의 차이
 
 ## 🍭 [CSS](https://saseungmin.github.io/frontend-tech-interview/docs/css)
 - Resetting과 Normalizing CSS의 차이점은 무엇인가요?
@@ -56,6 +57,7 @@
 - React 18 변경점
 - 재조정(Reconciliation)
 - When to `useMemo` and `useCallback`
+- React Strict Mode에서 렌더링이 두 번 되는 이유(함수가 두 번 호출되는 이유)
 
 ## 🍭 [Front-end](https://saseungmin.github.io/frontend-tech-interview/docs/front-end)
 - Webpack이란 무엇인가?
