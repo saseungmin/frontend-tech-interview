@@ -153,3 +153,5 @@
 - [FEConf 2024](https://2024.feconf.kr/)
 - [Toss slash24](https://toss.im/slash-24)
 - [daangn tech meetup 2024](https://tech-meetup.daangn.com/)
+- [woowacon 2024](https://2024.woowacon.com/)
+- [if kakao 2024](https://if.kakao.com/)
