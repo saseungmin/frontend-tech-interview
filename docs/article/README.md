@@ -105,6 +105,12 @@
 - [카카오 엔터테인먼트 - SEO 개선 초심자 가이드](https://fe-developers.kakaoent.com/2022/221208-basic-seo-guide/)
 - [(번역) 2023년 웹 개발 트렌드 10가지](https://ykss.netlify.app/translation/10_web_development_trends_in_2023)
 
+### 유튜브
+- [FEConf](https://www.youtube.com/@feconfkorea)
+- [toss](https://www.youtube.com/@toss_official/videos)
+- [우아한형제들](https://www.youtube.com/@woowatech)
+- [if kakao](https://youtube.com/playlist?list=PLyraqdoIVJhmCIlhXAYjZwqwxT5Ih1kBG&si=Cl8vzcl7L3sBVC_u)
+
 ### 컨퍼런스
 - [인프콘 2022](https://www.inflearn.com/course/infcon2022)
   - [나도 내 코드의 문제를 찾고 싶다고요?! - 테스트할 때 기억할 7가지](https://infcon.day/speaker/%ed%95%9c%ec%a3%bc%ec%8a%b9-%ed%85%8c%ec%8a%a4%ed%8a%b8-%ea%b8%b0%ec%96%b5%ed%95%a0-7%ea%b0%80%ec%a7%80/)
@@ -153,5 +159,6 @@
 - [FEConf 2024](https://2024.feconf.kr/)
 - [Toss slash24](https://toss.im/slash-24)
 - [daangn tech meetup 2024](https://tech-meetup.daangn.com/)
+  - [당근밋업 자료](https://daangn.notion.site/2024-2f42802561d14f2bbdf0ef18a2786732)
 - [woowacon 2024](https://2024.woowacon.com/)
 - [if kakao 2024](https://if.kakao.com/)
