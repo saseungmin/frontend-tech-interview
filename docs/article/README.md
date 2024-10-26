@@ -162,3 +162,5 @@
   - [당근밋업 자료](https://daangn.notion.site/2024-2f42802561d14f2bbdf0ef18a2786732)
 - [woowacon 2024](https://2024.woowacon.com/)
 - [if kakao 2024](https://if.kakao.com/)
+- [DAN 24(네이버 컨퍼런스)](https://dan.naver.com/24/sessions)
+  
