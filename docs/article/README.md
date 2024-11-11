@@ -15,6 +15,7 @@
 - [daily.dev](https://app.daily.dev/my-feed)
 - [web.dev](https://web.dev/?hl=ko)
 - [Velog](https://velog.io/)
+- [FE News](https://substack.com/sign-in?redirect=%2Faccount%3Futm_source%3Dsubstack%26utm_medium%3Demail&for_pub=fenews&email=&with_password=&change_user=false&justTrying=)
 
 ### 💻 국내 기업 기술 블로그
 - [네이버 D2](https://d2.naver.com/home)
@@ -163,4 +164,10 @@
 - [woowacon 2024](https://2024.woowacon.com/)
 - [if kakao 2024](https://if.kakao.com/)
 - [DAN 24(네이버 컨퍼런스)](https://dan.naver.com/24/sessions)
-  
+  - [WhaleOS: 선생님 부터 로봇 개발자 까지, 더불어 만들고 살아 숨쉬는 운영체계](https://dan.naver.com/24/sessions/596)
+  - [데이터 기반으로 지속적 성장이 가능한 네이버 검색 FE 시스템 구축하기](https://dan.naver.com/24/sessions/622)
+  - [네이버 검색에서 웹 성능 관리하는 방법: web-vitals 수집부터 개선까지](https://dan.naver.com/24/sessions/607)
+  - [여러분의 웹서비스에는 꼭 필요한 것만 있나요? 번들사이즈 최소화를 통한 웹 성능 개선](https://dan.naver.com/24/sessions/600)
+- [ViteConf 2024](https://youtube.com/playlist?list=PLqGQbXn_GDmnObDzgjUF4Krsfl6OUKxtp&si=3RgAPKuI10ltGODw)
+  - [Evan You | Keynote: Vite and the Future of JavaScript Tooling | ViteConf 2024](https://www.youtube.com/watch?v=EKvvptbTx6k&list=PLqGQbXn_GDmnObDzgjUF4Krsfl6OUKxtp&index=2)
+  - 
