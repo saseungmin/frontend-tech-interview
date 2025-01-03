@@ -170,4 +170,3 @@
   - [여러분의 웹서비스에는 꼭 필요한 것만 있나요? 번들사이즈 최소화를 통한 웹 성능 개선](https://dan.naver.com/24/sessions/600)
 - [ViteConf 2024](https://youtube.com/playlist?list=PLqGQbXn_GDmnObDzgjUF4Krsfl6OUKxtp&si=3RgAPKuI10ltGODw)
   - [Evan You | Keynote: Vite and the Future of JavaScript Tooling | ViteConf 2024](https://www.youtube.com/watch?v=EKvvptbTx6k&list=PLqGQbXn_GDmnObDzgjUF4Krsfl6OUKxtp&index=2)
-  - 
