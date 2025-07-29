@@ -42,3 +42,24 @@ fabric은 또한 react suspense, react native에서 react 동시 기능 활성�
 > - https://engineering.rently.com/react-native-fabric-architecture/
 > - https://www.brilworks.com/blog/react-native-fabric/
 > - https://blog.logrocket.com/react-native-new-architecture-sync-async-rendering/
+
+## react native의 animated와 react-native-reanimated의 차이
+React Native는 Animated API는 기본적으로 JavaScript 스레드에서 실행되지만, `useNativeDiver: true` 옵션을 사용하여 네이티브 스레드에서 실행이 가능합니다. 하지만, 네이티브 드라이버 사용 시에도 모든 속성이 지원되지는 않는 단점이 있습니다. 비레이아웃 속성만 애니메이션할 수 있습니다.(`transform`과 `opacity`는 작동하지만 `Flexbox`와 `position` 속성은 작동하지 않음.)   
+
+그에 비해 react native reanimated는 기본적으로 UI 스레드에서 실행되며, javascript 스레드에 부하를 생성하지 않고 모든 네이티브 속성의 애니메이션을 지원합니다.   또한, Animated API 같은 경우 60FPS에서 애니메이션을 수행하도록 하드코딩되어 있어 그 이상의 부드러운 애니메이션이 제한적이지만, reanimated는 최대 120FPS 이상의 부드러운 애니메이션을 제공합니다.   
+
+Reanimated는 React Native의 메인 JavaScript 스레드를 완전히 우회하여 애니메이션을 실행할 수 있게 합니다. 애니메이션 러너가 완전히 격리되어 있어서, 애플리케이션 로직(컴포넌트 렌더링, 데이터 가져오기 및 처리 등)이 애니메이션 성능에 영향을 주지 않습니다.   
+
+추가적으로 react native reanimated에는 worklets의 개념이 있는데 worklets은 UI 스레드에서 실행되는 JavaScript 함수입니다. 이를 통해 브리지 비용을 걱정하지 않고 javascript로 네이티브 수준의 애니메이션 명령을 정의할 수 있습니다. 기능은 매우 강력하지만, 추론하기 어려울 수 있는게 단점입니다.   
+
+또한, react native reanimated shared value는 `Animated.Values`와 비교할 수 있는데 이들은 "애니메이션 가능한" 데이터를 운반하고, 반응성의 개념을 제공하며, 애니메이션을 구동하는 유사한 목적을 제공합니다.   
+shared values가 필요한 이유는 공유 메모리 개념을 제공하는 것입니다. `useSharedValue`를 사용하여 shared value를 생성하면, 네이티브 측에 메모리 블록을 할당하고 거기에 값을 저장합니다.    
+
+> 네이티브 측의 정확한 위치는 worklet runtime(UI 스레드에서 실행되는 별도의 javascript 런타임), JSI C++ Layer(스레드 간 통신과 메모리 관리를 담당하는 C++ 레이어), 실제 네이티브 플랫폼(iOS/Android의 네이티브 UI 시스템)으로 Shared Value의 실제 데이터는 **Worklet Runtime**에 저장되며, **JSI C++ 레이어**를 통해 React Native JS 스레드와 동기화됩니다. 이를 통해 애니메이션이 React의 렌더링 사이클과 독립적으로 UI 스레드에서 부드럽게 실행될 수 있는 것입니다.
+
+그렇기 때문에 shared values는 UI 스레드에서 업데이트되고 읽히도록 최적화되어 있습니다. 따라서 UI스레드에서 수행되는 읽기와 쓰기는 모두 동기적입니다. 하지만 이러한 선택으로 JS 스레드에서 수행된 업데이트는 모두 비동기적입니다. 업데이트는 즉시 이루어지는 대신, Reanimated 코어는 UI 스레드에서 수행될 업데이트를 스케줄링하여 동시성 문제를 방지합니다.   
+이러한 이유는 shared value는 단순한 javascript 객체이므로 일반적인 React 리렌더를 트리거하지 않습니다. 이것이 바로 Shared Values가 성능상 이점을 제공하는 핵심 이유로, 애니메이션 값이 변경되어도 React 컴포넌트가 리렌더되지 않으므로, 애니메이션이 React의 렌더링 사이클과 독립적으로 UI 스레드에서 부드럽게 실행될 수 있습니다.  
+
+## react native에서 개발할 때 빈 화면이 나오는 에러의 이유와 crash나는 에러의 차이는?
+
+## code push의 동작 원리
