@@ -60,6 +60,10 @@ shared values가 필요한 이유는 공유 메모리 개념을 제공하는 것
 그렇기 때문에 shared values는 UI 스레드에서 업데이트되고 읽히도록 최적화되어 있습니다. 따라서 UI스레드에서 수행되는 읽기와 쓰기는 모두 동기적입니다. 하지만 이러한 선택으로 JS 스레드에서 수행된 업데이트는 모두 비동기적입니다. 업데이트는 즉시 이루어지는 대신, Reanimated 코어는 UI 스레드에서 수행될 업데이트를 스케줄링하여 동시성 문제를 방지합니다.   
 이러한 이유는 shared value는 단순한 javascript 객체이므로 일반적인 React 리렌더를 트리거하지 않습니다. 이것이 바로 Shared Values가 성능상 이점을 제공하는 핵심 이유로, 애니메이션 값이 변경되어도 React 컴포넌트가 리렌더되지 않으므로, 애니메이션이 React의 렌더링 사이클과 독립적으로 UI 스레드에서 부드럽게 실행될 수 있습니다.  
 
+> - https://docs.swmansion.com/react-native-reanimated/docs/guides/worklets
+> - https://github.com/software-mansion/react-native-reanimated/discussions/7264
+> - https://docs.swmansion.com/react-native-reanimated/docs/core/useSharedValue
+
 ## react native에서 개발할 때 빈 화면이 나오는 에러의 이유와 crash나는 에러의 차이는?
 
 ## code push의 동작 원리
