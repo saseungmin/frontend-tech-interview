@@ -59,6 +59,8 @@
 - When to `useMemo` and `useCallback`
 - React Strict Mode에서 렌더링이 두 번 되는 이유(함수가 두 번 호출되는 이유)
 
+## 🍭 [React Native](https://saseungmin.github.io/frontend-tech-interview/docs/react-native)
+
 ## 🍭 [Front-end](https://saseungmin.github.io/frontend-tech-interview/docs/front-end)
 - Webpack이란 무엇인가?
 - Babel vs Terser vs SWC
