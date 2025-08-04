@@ -1,5 +1,7 @@
 # 질문 리스트
 
+## React Native란 무엇이고 React랑은 어떻게 다를까?
+
 ## React Native old architecture의 어떠한 문제 떄문에 new architecture가 나오게 되었나?
 기존에 react native의 old architecture는 bridge 통신의 근본적인 한계가 있었습니다.   
 javascript와 native 레이어 간에 모든 통신이 bridge라는 중간 매개체를 통해 비동기적으로 처리하였는데 javascript 레이어가 데이터를 bridge로 보내고 native 레이어는 이 처리를 기다려야 합니다.   
@@ -63,6 +65,31 @@ shared values가 필요한 이유는 공유 메모리 개념을 제공하는 것
 > - https://docs.swmansion.com/react-native-reanimated/docs/guides/worklets
 > - https://github.com/software-mansion/react-native-reanimated/discussions/7264
 > - https://docs.swmansion.com/react-native-reanimated/docs/core/useSharedValue
+
+## FlatList랑 ScrollView의 차이는 무엇이고 어떤 상황에서 사용하는지?
+ScrollView는 모든 자식 컴포넌트를 한 번에 렌더링하며, 화면에 보이지 않는 요소들도 모두 메모리에 로드합니다. 때문에 모든 아이템을 한 번에 렌더링하므로 초기 렌더링 시간이 길어지고 메모리 사용량이 증가합니다. 그래서 ScrollView는 작고 고정된 개수의 아이템을 표시하거나 정적인 콘텐츠일 경우에 사용할 수 있습니다.
+
+반면에 FlatList는 가상 스크롤링을 사용하여 현재 보이는 아이템들만 렌더링하고, 화면에서 벗어난 아이템들은 빈공간으로 처리하여, 기본적으로 10개 아이템만 렌더링하고 스크롤할 때마다 필요한 아이템을 동적으로 로드하여 메모리에 효율적입니다. 이러한 특성 떄문에 FlatList는 화면에서 벗어난 컴포넌트를 언마운트하고 다시 돌아올 때 재생성하므로 내부 상태가 초기화됩니다. 따라서 대량의 데이터나 동적 리스트를 표시하거나 무한 스크롤이나 지연 로딩이 필요할 때, 성능 최적화가 중요한 긴 리스트인 경우에 사용하면 좋습니다.
+
+### 그렇다면, FlatList보다 FlashList 좋다는데 FlashList는 FlatList의 어떤 문제를 개선하여 성능이 더 좋은건지?
+FlatList는 가상화 기술을 사용하여 현재 보이는 아이템들만 렌더링하고, 뷰포트 외우의 아이템들은 언마운트하여 메모리를 절약하고 성능을 향상 시킵니다. 하지만 이 방식은 컴포넌트를 마운트하고 언마운트하는 과정에서 디바이스 리소스를 소모하는 오버헤드가 발생합니다.   
+
+이러한 문제를 FlashList는 가상화 대신 Cell Recycling 전략을 사용합니다. 메모리에 고정된 컴포넌트 인스턴스 풀을 유지하고, 아이템이 화면에서 벗어날 때 같은 컴포넌트를 새로운 데이터로 재사용합니다. 보이지 않는 아이템은 메모리에서 해제하는 것은 더 많은 객체 생성과 가비지 컬렉션을 유발하므로, FlashList는 리사이클링이 성능이나 메모리 효율성을 손상시키지 않으면서 무한 리스트를 렌더링하는 최상의 방법을 제공합니다.
+
+### FlashList를 사용할때 성능 최적화 할 수 있는 팁이 있다면?
+FlashList는 뷰포트 벗어날 때 컴포넌트가 파괴되지 않고 다른 item prop으로 다시 렌더링 됩니다. 따라서 **리사이클링 시 가능한 한 적은 것들이 다시 렌더링되고 재계산되도록 최적화**해야 합니다.   
+
+아이템 내부에 key prop이 있다면 제거하는게 좋습니다. react에서는 list item에 key를 설정하는것을 권장하지만 FlashList의 핵심 성능 이점은 컴포넌트를 생성하고 파괴하는 것 대신 재활용하는 것인데, 서로 다른 데이터 아이템 간에 변경되는 key prop을 추가하면 react가 컴포넌트를 완전히 다른 것으로 취급하여 컴포넌트 트리를 완전히 재생성하게 됩니다. 따라서 FlashList의 재활용하는 이점을 제대로 누릴수 없게 됩니다.   
+
+서로 다른 타입의 셀 컴포넌트가 있을때, `getItemType`을 활용해서 서로 다른 타입의 아이템을 재활용하지 않아 재렌더링이 더 빨라집니다.   
+
+아이템에 직접 의존하지 않는 무거운 컴포넌트는 `memo`로 감쌉니다.   
+
+많은 리소스를 사용하는 계산이 있다면 메모이제이션을 고려하거나 더 빠르게 만들거나 완전히 제거하는게 좋습니다.
+
+> - https://shopify.github.io/flash-list/docs/fundamentals/performance/
+> - https://shopify.github.io/flash-list/docs/recycling/
+> - https://medium.com/@anisurrahmanbup/react-native-flashlist-performant-list-view-implementation-analysis-8b29df8f2560
 
 ## react native에서 개발할 때 빈 화면이 나오는 에러의 이유와 crash나는 에러의 차이는?
 
