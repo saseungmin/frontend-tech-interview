@@ -1,7 +1,5 @@
 # 질문 리스트
 
-## React Native란 무엇이고 React랑은 어떻게 다를까?
-
 ## React Native old architecture의 어떠한 문제 떄문에 new architecture가 나오게 되었나?
 기존에 react native의 old architecture는 bridge 통신의 근본적인 한계가 있었습니다.   
 javascript와 native 레이어 간에 모든 통신이 bridge라는 중간 매개체를 통해 비동기적으로 처리하였는데 javascript 레이어가 데이터를 bridge로 보내고 native 레이어는 이 처리를 기다려야 합니다.   
@@ -90,6 +88,40 @@ FlashList는 뷰포트 벗어날 때 컴포넌트가 파괴되지 않고 다른 
 > - https://shopify.github.io/flash-list/docs/fundamentals/performance/
 > - https://shopify.github.io/flash-list/docs/recycling/
 > - https://medium.com/@anisurrahmanbup/react-native-flashlist-performant-list-view-implementation-analysis-8b29df8f2560
+
+## React Native의 렌더링 과정 feat. virtual dom
+가상 돔은 브라우저 독립적인 방식으로 동작합니다. 따라서 virtual dom의 개념은 react 뿐만 아니라 React Native와 같은 플랫폼에서도 활용될 수 있습니다. 다른 기술과 함께 사용할 수 있으며, 다양한 환경에서 렌더링할 수 있도록 해줍니다.   
+React Native에서도 React와 마찬가지로 virtual dom을 사용하지만, 최종 렌더링 대상이 웹 브라우저의 DOM이 아닌 **네티이브 컴포넌트**라는 차이가 있습니다.   
+
+old architecture
+1. javascript 실행: javascript thread에서 react 컴포넌트 로직과 UI 업데이트를 처리합니다.
+2. Bridge를 통한 비동기 통신: JavaScript와 Native간 통신은 비동기 Bridge를 통해 이루어졌으며, 모든 데이터는 JSON 형태로 직렬화되어 전송되었습니다.
+3. Shadow Thread에서 레이아웃 계산: Shadow Thread에서 Yoga Engine을 사용해 Flexbox 스타일을 네이티브 레이아웃으로 변환하고 위치를 계산합니다.
+4. Native UI 렌더링: Native Thread에서 계산된 레이아웃을 바탕으로 실제 네이티브 컴포넌트를 회면에 렌더링합니다.
+
+Old architecture는 bridge 통신과 모든 데이터 직렬화/역직렬화로 인한 성능 저하로 인해 병목되어 60+FPS 달성이 어려웠고, JavaScript와 Native 레이어 간 동기화 문제로 인한 UI 점프 현상, 단일 스레드에서만 레이아웃 계산이 가능한 문제점들이 있었습니다.   
+
+New architecture에서의 렌더링 과정은 렌더러인 Fabric이 담당합니다.   
+
+1. Render Phase:
+   1. React가 JavaScript에서 React Element Tree를 생성합니다. 이는 회면에 나타날 내용을 설명하는 평범한 JavaScript 객체들입니다.
+   2. Fabric 렌더러가 React Element Tree를 바탕으로 C++에서 React Shadow Tree를 생성합니다. 각 React Shadow Node(불변 객체)는 마운트될 React Host Component를 나타내며, JavaScript에서 온 Props 정보를 포함합니다.
+2. Commit Phase:
+   1. Yoga 엔진이 각 Shadow Node의 레이아웃을 계산합니다.
+   2. Tree Promotion으로 새로운 Shadow Tree를 다음 마운트 대상으로 승격시킵니다.
+3. Mount Phase:
+   1. React Shadow Tree가 Host View Tree로 변환합니다.
+   2. 실제 네이티브 뷰 생성 및 화면에 마운트 합니다.
+
+Old architecture에서는 shadow thread의 백그라운드 스레드로 UI 요소들의 레이아웃을 렌더링 전에 계산하는 중요한 작업을 수행었습니다. 하지만, new architecture에서는 shadow thread가 제거 되었는데, 그 이유는 메모리 공유 방식에 변화가 있었습니다.   
+old에서 javascript와 native 스레드에서 가각 별도의 계층/DOM 노드 복사본을 유지하여 메모리를 사용했어야 했는데 New architecture에서는 Fabric 렌더러가 C++ 세계(UI 스레드)에 존재하는 렌더러로, React가 C++에서 생성한 virtual DOM에 대한 참조를 가지며, 객체들이 UI(네티이브)와 JS 스레드 간에 공유되어 Shadow Thread의 필요성을 제거합니다.
+
+### 그렇다면 yoga engine은 무엇인가?
+yoga는 임베드 가능한 크로스 플랫폼 레이아웃 엔진으로 Flexbox 기반으로 만들어졌으며, **박스들의 크기와 위치만을 결정하는 것이 주된 역할**입니다. yoga 자체는 UI 프레임워크가 아니며 직접 그리기 작업은 하지 않습니다.   
+
+yoga의 핵심 기능으로 Flexbox 레이아웃 시스템으로 Flexbox 레이아웃 모델을 구현하여 컴포넌트들이 어떻게 위치하고 크기가 정해지는지를 계산합니다. 또한, 크로스 플랫폼 지원으로 yoga는 android, ios UIKit, .net, swift, c++의 여럿 플랫폼을 지원합니다.   
+
+또한, yoga는 성능을 고려하여 설계되었는데, 레이아웃을 계산할 때 텍스트 뷰나 라벨과 같이 측정하는데 시간이 오래 걸리는 요소들을 가능한 한 적게, 이상적으로는 한 번만 측정하도록 보장합니다.
 
 ## react native에서 개발할 때 빈 화면이 나오는 에러의 이유와 crash나는 에러의 차이는?
 
