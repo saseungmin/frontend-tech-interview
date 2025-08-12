@@ -150,3 +150,13 @@ React Native 앱은 JavaScript 파일과 이미지 등의 에셋으로 구성되
 > - https://blog.theodo.com/2023/10/why-use-rn-stylesheets/
 > - https://stackoverflow.com/questions/38958888/react-native-what-is-the-benefit-of-using-stylesheet-vs-a-plain-object
 > - https://reactnative.dev/docs/stylesheet.html
+
+## ❓ hermes에 대해서 설명해주실 수 있나요?
+
+hermes는 react native에 최적화된 javascript 엔진입니다. hermes는 안드로이드 기기에 최적화하기 위해 설계되었는데 현재는 ios에도 react native 기본 엔진으로 채택되어있습니다.
+
+hermes는 앱 빌드시간에 javascript를 미리 바이트코드로 컴파일하여 앱시작 시간을 단축시킵니다. 또한 hermes는 javascript 파일의 크기를 줄여 애플리케이션의 전체 크기를 줄이고 메모리 효율성을 보장하기 위해 간결한 바이트코드를 사용합니다.
+
+### 그러면 이전에 사용했던 JavascriptCore랑 어떤 점이 다른가
+
+javascriptCore는 Apple에서 개발한 오픈소스 javascript 엔진(safari)으로 JIT(Just-In-Time) 컴파일을 사용하여 런타임 성능이 뛰어납니다. 하지만 JIT 컴파일러는 애플리케이션 시작 시간을 늦추고, 메모리 사용량이 hermes보다 큽니다. 따라서 모바일 환경에서 hermes가 최적화 되어있기때문에 hermes엔진을 기본적으로 사용하고 있습니다.
